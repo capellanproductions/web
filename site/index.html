@@ -4,41 +4,39 @@
 <meta charset="utf-8">
 <title>Brooklyn Mill And Door</title>
 <style>
-    /* Estilos para la imagen de fondo */
     body {
-  background-image: 
-            url('images/fondo.jpg'), /* Imagen superior */
-            url('images/fondo2.jpg'); /* Imagen inferior */
-        background-repeat: no-repeat, no-repeat; /* Evita que se repitan las imágenes */
-        background-position: top center, bottom center; /* Ajusta las posiciones */
-        background-size: auto, auto; /* Tamaños de las imágenes */
+        background-image: 
+            url('images/fondo.jpg'), 
+            url('images/fondo2.jpg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: top center, bottom center;
+        background-size: auto, auto;
         margin: 0;
         font-family: Arial, sans-serif;
-        overflow-x: auto; /* Permite scroll horizontal si es necesario */
-        overflow-y: auto; /* Permite scroll vertical si es necesario */
+        overflow-x: auto;
+        overflow-y: auto;
     }
 
-    /* Estilos para el contenedor de iframes */
     .iframe-container {
         display: flex;
-        flex-direction: row; /* Alinea los iframes horizontalmente */
-        justify-content: center; /* Centra los iframes */
-        align-items: center; /* Alinea verticalmente */
-        gap: 0px; /* Espaciado entre los iframes */
-        flex-wrap: wrap; /* permite que los iframes se ajusten en filas */
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        flex-wrap: wrap;
     }
 
-    /* Estilos para los iframes */
     .iframe-container iframe {
         border: none;
-        opacity: 0; /* Animación de desvanecimiento */
-        transition: opacity 0.5s ease-in-out;
-        flex-shrink: 0; /* Previene que los iframes se reduzcan */
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        flex-shrink: 0;
     }
 
-    /* Cuando el iframe está cargado */
     .iframe-container iframe[data-loaded="true"] {
         opacity: 1;
+        transform: translateY(0);
     }
 </style>
 </head>
@@ -46,7 +44,7 @@
 <div class="iframe-container">
     <iframe data-src="images/f960.jpg" width="960" height="267"></iframe>
     <iframe data-src="texto con boton canvas.html" width="480" height="267"></iframe>
-	<iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
+    <iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
     <iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
     <iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
 </div>
@@ -57,10 +55,12 @@ var iframes = document.querySelectorAll('.iframe-container iframe');
 function loadVisibleIframes() {
     iframes.forEach(function(iframe) {
         var rect = iframe.getBoundingClientRect();
+        var iframeHeight = rect.bottom - rect.top;
+        var visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+        var visibilityPercentage = (visibleHeight / iframeHeight) * 100;
 
         if (
-            rect.bottom >= 0 && // El iframe está al menos parcialmente visible
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            visibilityPercentage >= 90 && // Al menos el 50% del iframe es visible
             !iframe.hasAttribute('data-loaded') // Verifica si no se ha cargado antes
         ) {
             iframe.src = iframe.getAttribute('data-src'); // Carga la src del iframe
@@ -69,7 +69,7 @@ function loadVisibleIframes() {
     });
 }
 
-// Agrega un event listener para cargar los iframes cuando son visibles
+// Agrega event listeners para cargar y animar los iframes
 window.addEventListener('scroll', loadVisibleIframes);
 window.addEventListener('resize', loadVisibleIframes);
 window.addEventListener('DOMContentLoaded', loadVisibleIframes);
