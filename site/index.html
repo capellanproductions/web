@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <title>Brooklyn Mill And Door</title>
 <style>
+    /* Estilos para la imagen de fondo */
+    body {
+        background-image: url('images/fondo.jpg'); /* Ruta de tu imagen */
+        background-repeat: no-repeat; /* Evita que se repita la imagen */
+        background-position: top center; /* Ajusta la imagen al techo y la centra horizontalmente */
+        background-size: auto; /* Ajusta automáticamente el tamaño de la imagen */
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: auto; /* Permite scroll horizontal en la ventana principal si es necesario */
+        overflow-y: auto; /* Permite scroll vertical en la ventana principal */
+    }
+
     /* Estilos para el contenedor de iframes */
     .iframe-container {
         display: flex;
@@ -26,25 +38,15 @@
     .iframe-container iframe[data-loaded="true"] {
         opacity: 1;
     }
-
-    /* Estilo para el fondo */
-    body {
-        background-color: #FFFFFF;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        overflow-x: auto; /* Permite scroll horizontal en la ventana principal si es necesario */
-        overflow-y: auto; /* Permite scroll vertical en la ventana principal */
-    }
 </style>
-
 </head>
 <body>
 <div class="iframe-container">
-    <iframe data-src="images/g1440.jpg" width="1440" height="267"></iframe>
+    <iframe data-src="images/f960.jpg" width="960" height="267"></iframe>
     <iframe data-src="top.html" width="480" height="267"></iframe>
 	<iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
     <iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
-    
+    <iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
 </div>
 
 <script>
