@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Top</title>
+</head>
+<body>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <!-- Contenido existente -->
+    <h1 style="font-size: 30px; font-family: Arial; margin: 0; color: blue;">
+        Abogada de Daddy Yankee: "El divorcio es la única vía disponible"
+    </h1>
+    <p style="font-size: 25px; font-family: Arial; margin: 10px 0; color: white;">
+        La representante legal del reguetonero detalló que "durante mucho tiempo él intentó infructuosamente salvar las diferencias".
+    </p>
+
+    <!-- Canvas para el botón -->
+    <div style="position: fixed; bottom: 0px; right: 0px;">
+        <canvas id="botonCanvas" width="150" height="50"></canvas>
+    </div>
+
+    <!-- Scripts de Adobe Animate -->
+    <script src="boton.js"></script>
+    <script>
+        // Configuración del botón animado
+        const canvas = document.getElementById("botonCanvas");
+        const comp = AdobeAn.getComposition("50F894D370DB80419C71037F7F292CFF");
+        const lib = comp.getLibrary();
+
+        const exportRoot = new lib.boton();
+        const stage = new lib.Stage(canvas);
+
+        // Configuración de sincronización y animación
+        AdobeAn.makeResponsive(false, 'both', false, 1, [canvas]);
+        AdobeAn.compositionLoaded(lib.properties.id);
+        stage.addChild(exportRoot);
+
+        // Actualización de la animación
+        createjs.Ticker.framerate = lib.properties.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+    </script>
+</body>
+</html>
+
+
