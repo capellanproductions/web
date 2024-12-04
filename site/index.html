@@ -6,14 +6,16 @@
 <style>
     /* Estilos para la imagen de fondo */
     body {
-        background-image: url('images/fondo.jpg'); /* Ruta de tu imagen */
-        background-repeat: no-repeat; /* Evita que se repita la imagen */
-        background-position: top center; /* Ajusta la imagen al techo y la centra horizontalmente */
-        background-size: auto; /* Ajusta automáticamente el tamaño de la imagen */
+  background-image: 
+            url('images/fondo.jpg'), /* Imagen superior */
+            url('images/fondo2.jpg'); /* Imagen inferior */
+        background-repeat: no-repeat, no-repeat; /* Evita que se repitan las imágenes */
+        background-position: top center, bottom center; /* Ajusta las posiciones */
+        background-size: auto, auto; /* Tamaños de las imágenes */
         margin: 0;
         font-family: Arial, sans-serif;
-        overflow-x: auto; /* Permite scroll horizontal en la ventana principal si es necesario */
-        overflow-y: auto; /* Permite scroll vertical en la ventana principal */
+        overflow-x: auto; /* Permite scroll horizontal si es necesario */
+        overflow-y: auto; /* Permite scroll vertical si es necesario */
     }
 
     /* Estilos para el contenedor de iframes */
