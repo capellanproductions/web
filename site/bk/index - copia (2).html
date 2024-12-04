@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Brooklyn Mill And Door</title>
+<style>
+    /* Estilos para la imagen de fondo */
+    body {
+        background-image: 
+            url('images/fondo.jpg'), /* Imagen superior */
+            url('images/fondo2.jpg'); /* Imagen inferior */
+        background-repeat: no-repeat, no-repeat; /* Evita que se repitan las imágenes */
+        background-position: top center, bottom center; /* Ajusta las posiciones */
+        background-size: auto, auto; /* Tamaños de las imágenes */
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: auto; /* Permite scroll horizontal si es necesario */
+        overflow-y: auto; /* Permite scroll vertical si es necesario */
+    }
+
+    /* Estilos para el contenedor de iframes */
+    .iframe-container {
+        display: flex;
+        flex-direction: row; /* Alinea los iframes horizontalmente */
+        justify-content: center; /* Centra los iframes */
+        align-items: center; /* Alinea verticalmente */
+        gap: 0px; /* Espaciado entre los iframes */
+        flex-wrap: wrap; /* permite que los iframes se ajusten en filas */
+    }
+
+    /* Estilos para los iframes */
+    .iframe-container iframe {
+        border: none;
+        opacity: 0; /* Animación de desvanecimiento */
+        transform: translateY(30px); /* Posición inicial 15px abajo */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        flex-shrink: 0; /* Previene que los iframes se reduzcan */
+    }
+
+    /* Cuando el iframe está cargado */
+    .iframe-container iframe[data-loaded="true"] {
+        opacity: 1;
+        transform: translateY(0); /* Sube a su posición original */
+    }
+</style>
+</head>
+<body>
+<div class="iframe-container">
+    <iframe data-src="images/f960.jpg" width="960" height="267"></iframe>
+    <iframe data-src="texto con boton canvas.html" width="480" height="267"></iframe>
+    <iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
+    <iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
+    <iframe data-src="images/e480.jpg" width="480" height="267"></iframe>
+</div>
+
+<script>
+var iframes = document.querySelectorAll('.iframe-container iframe');
+
+function loadVisibleIframes() {
+    iframes.forEach(function(iframe) {
+        var rect = iframe.getBoundingClientRect();
+
+        if (
+            rect.bottom >= 0 && // El iframe está al menos parcialmente visible
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            !iframe.hasAttribute('data-loaded') // Verifica si no se ha cargado antes
+        ) {
+            iframe.src = iframe.getAttribute('data-src'); // Carga la src del iframe
+            iframe.setAttribute('data-loaded', 'true'); // Marca el iframe como cargado
+        }
+    });
+}
+
+// Agrega un event listener para cargar los iframes cuando son visibles
+window.addEventListener('scroll', loadVisibleIframes);
+window.addEventListener('resize', loadVisibleIframes);
+window.addEventListener('DOMContentLoaded', loadVisibleIframes);
+
+// Carga los iframes al cargar la página inicialmente
+window.addEventListener('load', loadVisibleIframes);
+</script>
+</body>
+</html>
