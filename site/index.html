@@ -72,7 +72,7 @@ function loadVisibleIframes() {
         var visibilityPercentage = (visibleHeight / iframeHeight) * 100;
 
         if (
-            visibilityPercentage >= 90 && // Al menos el 50% del iframe es visible
+            visibilityPercentage >= 50 && // Al menos el 50% del iframe es visible
             !iframe.hasAttribute('data-loaded') // Verifica si no se ha cargado antes
         ) {
             iframe.src = iframe.getAttribute('data-src'); // Carga la src del iframe
