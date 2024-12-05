@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Top</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.2); /* Fondo negro con 50% de transparencia */
+            color: white;
+            box-sizing: border-box;
+            overflow: hidden; /* Evita el scroll innecesario */
+        }
+
+        h1 a {
+            color: #CC0033;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin: 0;
+            color: blue;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .content {
+            padding: 25px;
+            height: 100%; /* Usar toda la altura disponible */
+            overflow-y: auto; /* Permite scroll solo en el contenido si es necesario */
+        }
+    </style>
+    <script>
+        // Función para detectar si el dispositivo es móvil
+        function isMobileDevice() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        window.addEventListener('load', function() {
+            if (isMobileDevice()) {
+                // Cambia el tamaño de los textos si es móvil
+                document.querySelector('h1').style.fontSize = '15px';
+                document.querySelector('p').style.fontSize = '12px';
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="content">
+        <!-- Título con enlace -->
+        <h1>
+            <a>
+                Sobre Capellan Productions
+            </a>
+        </h1>
+        
+        <!-- Texto -->
+        <p>
+            Capellan Productions es una empresa con una trayectoria sólida y reconocida, que cuenta con más de cuatro décadas de experiencia en la industria del entretenimiento y la producción musical. A lo largo de estos 40 años, hemos sido líderes en la organización de eventos artísticos de gran envergadura y en la creación de producciones musicales que destacan por su calidad, originalidad y profesionalismo. Nuestra misión ha sido siempre ofrecer servicios que no solo cumplan, sino que superen las expectativas de nuestros clientes, dejando una impresión duradera en todos los que disfrutan de nuestras creaciones.
+
+Desde nuestros comienzos, hemos trabajado incansablemente para mantenernos a la vanguardia de las tendencias del mercado, adaptándonos a los cambios y necesidades de nuestros clientes. No importa el tamaño del proyecto o la complejidad del evento, en Capellan Productions nos especializamos en transformar ideas en realidades impactantes. Nuestra filosofía se centra en la perfección y atención al detalle, asegurándonos de que cada aspecto de un evento, desde la planificación hasta la ejecución, esté meticulosamente diseñado para crear experiencias únicas y memorables.
+
+Además, nuestra pasión por la música y el arte nos ha llevado a producir canciones, álbumes y espectáculos que reflejan nuestra dedicación a la creatividad y la innovación. Sabemos que cada cliente es único, por lo que personalizamos cada proyecto para reflejar sus valores y objetivos. Creemos firmemente en que los eventos y las producciones musicales son mucho más que simples productos o servicios: son herramientas para conectar emociones, contar historias y dejar un impacto significativo en las vidas de las personas.
+
+En Capellan Productions, no solo nos enorgullece lo que hemos logrado, sino que también nos emociona lo que está por venir. Con cada evento que organizamos y cada producción que llevamos a cabo, construimos puentes emocionales entre nuestros clientes y su audiencia, asegurándonos de que cada experiencia sea tan especial como inolvidable. No solo organizamos eventos ni producimos música: creamos recuerdos, celebramos momentos y capturamos la esencia de lo que significa vivir y compartir experiencias excepcionales.
+
+Gracias a nuestro equipo de profesionales apasionados y dedicados, seguimos creciendo, innovando y estableciendo estándares más altos en la industria. En Capellan Productions, cada proyecto es una nueva oportunidad para elevar el nivel del arte y el entretenimiento, consolidándonos como una marca confiable, profesional y comprometida con la excelencia. ¡Permítanos ser parte de su próxima gran historia!
+        </p>
+    </div>
+</body>
+</html>
