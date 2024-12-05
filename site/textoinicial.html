@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title>Top</title>
     <style>
-        body {
-            background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de transparencia */
-            font-family: Arial, sans-serif;
-            color: white;
+        html, body {
             margin: 0;
-            padding: 25px; /* Margen interno de 10px */
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de transparencia */
+            color: white;
+            box-sizing: border-box;
+            overflow: hidden; /* Evita el scroll innecesario */
         }
 
         h1 a {
@@ -28,6 +32,22 @@
             margin: 10px 0;
             color: white;
         }
+
+        .content {
+            padding: 25px;
+            height: calc(100% - 30px); /* Deja espacio para la tira del degradado */
+            overflow-y: auto; /* Permite scroll solo en el contenido si es necesario */
+        }
+
+        .footer-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            pointer-events: none; /* Evita que interfiera con los clics */
+        }
     </style>
     <script>
         // Función para detectar si el dispositivo es móvil
@@ -45,17 +65,22 @@
     </script>
 </head>
 <body>
-    <!-- Título con enlace -->
-    <h1>
-        <a >
-            Sobre Nosotros.
-        </a>
-    </h1>
-    
-    <!-- Texto -->
-    <p>
-        Capellan Productions es una empresa con más de 40 años de experiencia en la industria, especializada en la organización de eventos artísticos y la producción musical. A lo largo de estas cuatro décadas, nos hemos dedicado a crear experiencias únicas que superan las expectativas de nuestros clientes, adaptándonos siempre a las necesidades y tendencias del mercado. 
-		Nos destacamos por nuestro compromiso con la excelencia y el profesionalismo, ofreciendo un nivel excepcional de calidad en cada proyecto que emprendemos. Desde la conceptualización hasta la ejecución, nos aseguramos de cuidar cada detalle, logrando que cada evento sea memorable y cada producción musical sea un reflejo de la pasión y la creatividad que nos define. En Capellan Productions, no solo organizamos eventos, sino que construimos momentos inolvidables que conectan emociones y dejan huellas imborrables.
-    </p>
+    <div class="content">
+        <!-- Título con enlace -->
+        <h1>
+            <a>
+                Sobre Nosotros.
+            </a>
+        </h1>
+        
+        <!-- Texto -->
+        <p>
+            Capellan Productions es una empresa con más de 40 años de experiencia en la industria, especializada en la organización de eventos artísticos y la producción musical. A lo largo de estas cuatro décadas, nos hemos dedicado a crear experiencias únicas que superan las expectativas de nuestros clientes, adaptándonos siempre a las necesidades y tendencias del mercado. 
+            Nos destacamos por nuestro compromiso con la excelencia y el profesionalismo, ofreciendo un nivel excepcional de calidad en cada proyecto que emprendemos. Desde la conceptualización hasta la ejecución, nos aseguramos de cuidar cada detalle, logrando que cada evento sea memorable y cada producción musical sea un reflejo de la pasión y la creatividad que nos define. En Capellan Productions, no solo organizamos eventos, sino que construimos momentos inolvidables que conectan emociones y dejan huellas imborrables.
+        </p>
+    </div>
+
+    <!-- Tira de degradado -->
+    <div class="footer-gradient"></div>
 </body>
 </html>
