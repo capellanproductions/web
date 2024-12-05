@@ -3,6 +3,32 @@
 <head>
     <meta charset="utf-8">
     <title>Top</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de transparencia */
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 a {
+            color: mediumpurple;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin: 0;
+            color: blue;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 10px 0;
+            color: white;
+        }
+    </style>
     <script>
         // Función para detectar si el dispositivo es móvil
         function isMobileDevice() {
@@ -12,29 +38,23 @@
         window.addEventListener('load', function() {
             if (isMobileDevice()) {
                 // Cambia el tamaño de los textos si es móvil
-                 //document.querySelector('h1').style.fontSize = '50px';
-                document.querySelector('p').style.fontSize = '35px';
+                document.querySelector('h1').style.fontSize = '35px';
+                document.querySelector('p').style.fontSize = '30px';
             }
         });
     </script>
 </head>
 <body>
-	
-	
-	
-	
     <!-- Título con enlace -->
-    <!--<h1 style="font-size: 30px; font-family: Arial; margin: 0; color: blue;">
-        <!--<a href="https://www.youtube.com" target="_blank" style="color: blue; text-decoration: none;">
-            Abogada de Daddy Yankee: "El divorcio es la única vía disponible"
+    <h1>
+        <a href="https://www.youtube.com" target="_blank">
+            Sobre Nosotros.
         </a>
     </h1>
     
     <!-- Texto -->
-    <p style="font-size: 25px; font-family: Arial; margin: 10px 0; color: white;">
-        Capellan Productions es una empresa con más de 40 años de experiencia en la industria, especializada en la organización de eventos artísticos y la producción musical. Nos destacamos por crear experiencias únicas y ofrecer un nivel excepcional de profesionalismo en cada proyecto.
+    <p>
+        Capellan Productions es una empresa con más de 40 años de experiencia en la industria, especializada en la organización de eventos artísticos y la producción musical. A lo largo de estas cuatro décadas, nos hemos dedicado a crear experiencias únicas que superan las expectativas de nuestros clientes, adaptándonos siempre a las necesidades y tendencias del mercado. Nos destacamos por nuestro compromiso con la excelencia y el profesionalismo, ofreciendo un nivel excepcional de calidad en cada proyecto que emprendemos. 
     </p>
-
-
 </body>
 </html>
