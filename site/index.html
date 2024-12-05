@@ -17,7 +17,7 @@
         overflow-x: auto;
         overflow-y: auto;
         position: relative; /* Necesario para la posición del video */
-        z-index: 3; /* Asegura que los fondos no queden encima del video */
+        z-index: 1; /* Asegura que los fondos no queden encima del video */
     }
 
     /* Video de fondo */
@@ -62,11 +62,12 @@
     }
 
     /* Márgenes específicos para los iframes de "bonny.png" y "krisspy.png" */
-    .iframe-container iframe[src="images/bonny.png"],
-    .iframe-container iframe[src="images/krisspy.png"],
-    .iframe-container iframe[src="images/rym.png"],
-    .iframe-container iframe[src="images/payamin.png"] {
-        margin: 100px; /* Margen de 100px en todas las direcciones */
+    .iframe-container iframe[src="images/bonnyx.png"],
+    .iframe-container iframe[src="images/krisspyx.png"],
+    .iframe-container iframe[src="images/rymx.png"],
+	.iframe-container iframe[src="images/payaminx.png"],
+    .iframe-container iframe[src="images/more.png"] {
+        margin: 90px; /* Margen de 100px en todas las direcciones */
     }
 </style>
 </head>
@@ -88,10 +89,11 @@
     <iframe data-src="images/40b.png" width="491" height="229"></iframe>
     <iframe data-src="textoinicial.html" width="980" height="400"></iframe>
     
-    <iframe data-src="images/bonny.png" width="490" height="700"></iframe>
-    <iframe data-src="images/krisspy.png" width="490" height="700"></iframe>
-    <iframe data-src="images/rym.png" width="490" height="700"></iframe>
-    <iframe data-src="images/payamin.png" width="490" height="700"></iframe>
+    <iframe data-src="images/bonnyx.png" width="400" height="700"></iframe>
+    <iframe data-src="images/krisspyx.png" width="400" height="700"></iframe>
+    <iframe data-src="images/rymx.png" width="400" height="700"></iframe>
+    <iframe data-src="images/payaminx.png" width="400" height="700"></iframe>
+	<iframe data-src="images/more.png" width="400" height="700"></iframe>
     
     <iframe data-src="bot.html" width="980" height="260"></iframe>
 </div>
