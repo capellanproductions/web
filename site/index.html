@@ -16,6 +16,25 @@
         font-family: Arial, sans-serif;
         overflow-x: auto;
         overflow-y: auto;
+        position: relative; /* Necesario para la posición del video */
+        z-index: 3; /* Asegura que los fondos no queden encima del video */
+    }
+
+    /* Video de fondo */
+    .background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -6; /* Asegura que el video esté debajo de los fondos */
+    }
+
+    .background-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que el video cubra toda el área */
+        opacity: 0.6; /* Aplica la opacidad */
     }
 
     .iframe-container {
@@ -25,6 +44,8 @@
         align-items: center;
         gap: 0px;
         flex-wrap: wrap;
+        z-index: 2; /* Asegura que los iframes estén por encima del video y fondos */
+        position: relative;
     }
 
     .iframe-container iframe {
@@ -42,12 +63,24 @@
 
     /* Márgenes específicos para los iframes de "bonny.png" y "krisspy.png" */
     .iframe-container iframe[src="images/bonny.png"],
-    .iframe-container iframe[src="images/krisspy.png"] {
+    .iframe-container iframe[src="images/krisspy.png"],
+    .iframe-container iframe[src="images/rym.png"],
+    .iframe-container iframe[src="images/payamin.png"] {
         margin: 100px; /* Margen de 100px en todas las direcciones */
     }
 </style>
 </head>
 <body>
+
+<!-- Video de fondo -->
+<div class="background-video">
+    <video autoplay loop muted>
+        <source src="images/bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Contenedor de los iframes -->
 <div class="iframe-container">
     <iframe data-src="menutop.html" width="960" height="400"></iframe>
     <iframe data-src="socialmedia.html" width="490" height="400"></iframe>
@@ -57,6 +90,8 @@
     
     <iframe data-src="images/bonny.png" width="490" height="700"></iframe>
     <iframe data-src="images/krisspy.png" width="490" height="700"></iframe>
+    <iframe data-src="images/rym.png" width="490" height="700"></iframe>
+    <iframe data-src="images/payamin.png" width="490" height="700"></iframe>
     
     <iframe data-src="bot.html" width="980" height="260"></iframe>
 </div>
@@ -89,5 +124,6 @@ window.addEventListener('DOMContentLoaded', loadVisibleIframes);
 // Carga los iframes al cargar la página inicialmente
 window.addEventListener('load', loadVisibleIframes);
 </script>
+
 </body>
 </html>
