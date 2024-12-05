@@ -65,9 +65,9 @@
     .iframe-container iframe[src="images/bonnyx.png"],
     .iframe-container iframe[src="images/krisspyx.png"],
     .iframe-container iframe[src="images/rymx.png"],
-	.iframe-container iframe[src="images/payaminx.png"],
+    .iframe-container iframe[src="images/payaminx.png"],
     .iframe-container iframe[src="images/more.png"] {
-        margin: 45px; /* Margen de 100px en todas las direcciones */
+        margin: 45px; /* Margen de 45px en todas las direcciones */
     }
 </style>
 </head>
@@ -93,12 +93,27 @@
     <iframe data-src="images/krisspyx.png" width="400" height="700"></iframe>
     <iframe data-src="images/rymx.png" width="400" height="700"></iframe>
     <iframe data-src="images/payaminx.png" width="400" height="700"></iframe>
-	<iframe data-src="images/more.png" width="400" height="700"></iframe>
+    <iframe data-src="images/more.png" width="400" height="700"></iframe>
     
     <iframe data-src="bot.html" width="980" height="260"></iframe>
 </div>
 
 <script>
+// Función para verificar si es un dispositivo móvil
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Ajusta la altura del iframe si es móvil
+function adjustIframeForMobile() {
+    if (isMobile()) {
+        var iframeToAdjust = document.querySelector('.iframe-container iframe[data-src="textoinicial.html"]');
+        if (iframeToAdjust) {
+            iframeToAdjust.style.height = "900px";
+        }
+    }
+}
+
 var iframes = document.querySelectorAll('.iframe-container iframe');
 
 function loadVisibleIframes() {
@@ -121,10 +136,16 @@ function loadVisibleIframes() {
 // Agrega event listeners para cargar y animar los iframes
 window.addEventListener('scroll', loadVisibleIframes);
 window.addEventListener('resize', loadVisibleIframes);
-window.addEventListener('DOMContentLoaded', loadVisibleIframes);
+window.addEventListener('DOMContentLoaded', function() {
+    loadVisibleIframes();
+    adjustIframeForMobile(); // Ajusta la altura del iframe si es móvil al cargar la página
+});
 
 // Carga los iframes al cargar la página inicialmente
-window.addEventListener('load', loadVisibleIframes);
+window.addEventListener('load', function() {
+    loadVisibleIframes();
+    adjustIframeForMobile(); // Vuelve a ajustar en caso de ser necesario
+});
 </script>
 
 </body>
