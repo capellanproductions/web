@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Capellan Productions</title>
+<style>
+    body {
+        background-color: black; /* Fondo negro para toda la página */
+        background-image: 
+            url('images/fondo.jpg'), 
+            url('images/fondo2.jpg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: top center, bottom center;
+        background-size: auto, auto;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: auto;
+        overflow-y: auto;
+        position: relative; /* Necesario para la posición del video */
+        z-index: 1; /* Asegura que los fondos no queden encima del video */
+    }
+
+    /* Video de fondo */
+    .background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -6; /* Asegura que el video esté debajo de los fondos */
+    }
+
+    .background-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que el video cubra toda el área */
+        opacity: 0.6; /* Aplica la opacidad */
+    }
+
+    .iframe-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        flex-wrap: wrap;
+        z-index: 2; /* Asegura que los iframes estén por encima del video y fondos */
+        position: relative;
+    }
+
+    .iframe-container iframe {
+        border: none;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        flex-shrink: 0;
+    }
+
+    .iframe-container iframe[data-loaded="true"] {
+        opacity: 1;
+        transform: translateY(0);
+
+</style>
+</head>
+<body>
+
+<!-- Video de fondo -->
+<div class="background-video">
+    <video autoplay loop muted>
+        <source src="images/bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Contenedor de los iframes -->
+<div class="iframe-container">
+    <iframe data-src="menutop.html" width="960" height="400"></iframe>
+    <iframe data-src="socialmedia.html" width="490" height="400"></iframe>
+    
+    
+    <iframe data-src="contactov.html" width="980" height="800"></iframe>
+    
+    
+    <iframe data-src="bot.html" width="980" height="260"></iframe>
+</div>
+
+<script>
+// Función para verificar si es un dispositivo móvil
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Ajusta la altura del iframe si es móvil
+function adjustIframeForMobile() {
+    if (isMobile()) {
+        var iframeToAdjust = document.querySelector('.iframe-container iframe[data-src="nosotrosv.html"]');
+        if (iframeToAdjust) {
+            iframeToAdjust.style.height = "2000px"; //aumenta el tanaño vertical si es en mobil
+        }
+    }
+}
+
+var iframes = document.querySelectorAll('.iframe-container iframe');
+
+function loadVisibleIframes() {
+    iframes.forEach(function(iframe) {
+        var rect = iframe.getBoundingClientRect();
+        var iframeHeight = rect.bottom - rect.top;
+        var visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+        var visibilityPercentage = (visibleHeight / iframeHeight) * 100;
+
+        if (
+            visibilityPercentage >= 50 && // Al menos el 50% del iframe es visible
+            !iframe.hasAttribute('data-loaded') // Verifica si no se ha cargado antes
+        ) {
+            iframe.src = iframe.getAttribute('data-src'); // Carga la src del iframe
+            iframe.setAttribute('data-loaded', 'true'); // Marca el iframe como cargado
+        }
+    });
+}
+
+// Agrega event listeners para cargar y animar los iframes
+window.addEventListener('scroll', loadVisibleIframes);
+window.addEventListener('resize', loadVisibleIframes);
+window.addEventListener('DOMContentLoaded', function() {
+    loadVisibleIframes();
+    adjustIframeForMobile(); // Ajusta la altura del iframe si es móvil al cargar la página
+});
+
+// Carga los iframes al cargar la página inicialmente
+window.addEventListener('load', function() {
+    loadVisibleIframes();
+    adjustIframeForMobile(); // Vuelve a ajustar en caso de ser necesario
+});
+</script>
+
+</body>
+</html>

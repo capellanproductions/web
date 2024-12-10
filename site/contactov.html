@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Top</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.2); /* Fondo negro con 50% de transparencia */
+            color: white;
+            box-sizing: border-box;
+            overflow: hidden; /* Evita el scroll innecesario */
+        }
+
+        h1 a {
+            color: #CC0033;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin: 0;
+            color: blue;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .content {
+            padding: 25px;
+            height: 100%; /* Usar toda la altura disponible */
+            overflow-y: auto; /* Permite scroll solo en el contenido si es necesario */
+        }
+    </style>
+    <script>
+        // Función para detectar si el dispositivo es móvil
+        function isMobileDevice() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        window.addEventListener('load', function() {
+            if (isMobileDevice()) {
+                // Cambia el tamaño de los textos si es móvil
+                document.querySelector('h1').style.fontSize = '15px';
+                document.querySelector('p').style.fontSize = '12px';
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="content">
+        <!-- Título con enlace -->
+        <h1>
+            <a>
+                Contactanos Para Negocios</a>
+        </h1>
+        
+        <!-- Texto -->
+      <p>Tel.: (809) 396-1159</p>
+      <p>Email: <a href="capellanproductions.rd1@gmail.com">capellanproductions.rd1@gmail.com</a></p>
+        <p>&nbsp;</p>
+        <p>En Capellan Productions, ofrecemos soluciones integrales para eventos artísticos y producción musical. Nos especializamos en conceptualizar y ejecutar eventos que cautivan y emocionan, así como en producir música con los más altos estándares de calidad. Con más de 40 años de experiencia, garantizamos profesionalismo, innovación y excelencia en cada proyecto. Si buscas una empresa que convierta tus ideas en experiencias memorables, ¡somos tu mejor opción!</p>
+    </div>
+</body>
+</html>
