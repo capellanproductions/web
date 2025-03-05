@@ -140,15 +140,15 @@ if (reversed == null) { reversed = false; }
 	// Capa_1
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("#00FFFF").s().p("ABoCUQh5gQg4AFQh7ARhGABQiAABgvg5IgKgNQgng7AqgzQAngxBHgDQANAAAuACQAmACAVgDQAfgGAegWQApgeANgGQA1gbArAOQAXAIBAAuQA9ArApARQAwAUBBADQBDAEAkAJQBGASAFAqQAFAohPAdQguAQhDAKQgbAEgiAAQgzAAhEgJg");
-	this.shape.setTransform(522.1008,128.5127,1.3626,1.3626);
+	this.shape.setTransform(522.1708,128.5196,1.3626,1.3626);
 
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.f("#00FFFF").s().p("ApFCRQg0gYgUgmIgDgHQgchBBFgjQA3geBEAEIBRAEQAuABAigKQAkgLA2giQA+gnAbgLQBLggBhAhQBHAYBXA9QBIAyBXATQA4ANB0AIQBDAFAuAVQBFAfgpA1QgZAehIgDQhQgKgbgCIhOgIQgvgGgeAFIhIAMQgqAHggAAQgfAAhogEQhTgDg0ACQjnALiDAAQgwgBgugVg");
-	this.shape_1.setTransform(457.8856,22.675,1.3626,1.3626);
+	this.shape_1.setTransform(457.9152,22.6836,1.3626,1.3626);
 
 	this.shape_2 = new cjs.Shape();
 	this.shape_2.graphics.f("#33FFFF").s().p("AqvEgQhagFhfggQh5gpglhBQgjg/A0hPQAlg2BSgkQBJggBLgGQAqgCBpAQQBdAOA4gKQBFgNB+hOQB7hKBHgKQCUgVCuA/QCqA+BuBuQAeAeA2A4QAxAsA3APQAlAKBOAGQBNAFAnAMQA2AQAUAYQAbAhgpAsQgYAag5AEIhZAAQhEAAiGgEQiHgEhDAAQgaAAioAIQhwAFhRgJQh7gTg/gJQhxgPhMAIQgxAGiIAkQhmAchGAAIgOAAg");
-	this.shape_2.setTransform(142.3553,153.3078,1.3626,1.3626);
+	this.shape_2.setTransform(142.3742,153.3208,1.3626,1.3626);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1},{t:this.shape}]}).wait(1));
 
@@ -787,7 +787,7 @@ if (reversed == null) { reversed = false; }
 
 	this.elem1 = new lib.ClipGroup();
 	this.elem1.name = "elem1";
-	this.elem1.setTransform(198.55,416.3,2.6415,2.6415,0,0,180,124.9,131.4);
+	this.elem1.setTransform(198.55,513.95,2.6415,2.6415,0,0,180,124.9,131.4);
 
 	this.elem3 = new lib.Símbolo18();
 	this.elem3.name = "elem3";
@@ -802,7 +802,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(393.1,429.2,754.3000000000001,334.3);
+p.nominalBounds = new cjs.Rectangle(393.1,526.9,754.3000000000001,334.30000000000007);
 // library properties:
 lib.properties = {
 	id: '6FF2618289C9C244BB1CA270BC66A74C',
