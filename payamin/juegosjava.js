@@ -2,7 +2,9 @@
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
-lib.ssMetadata = [];
+lib.ssMetadata = [
+		{name:"juegosjava_atlas_1", frames: [[446,0,316,435],[0,0,427,376],[0,378,444,354]]}
+];
 
 
 (lib.AnMovieClip = function(){
@@ -26,21 +28,24 @@ lib.ssMetadata = [];
 
 
 (lib.Mapadebits1 = function() {
-	this.initialize(img.Mapadebits1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,316,435);
+	this.initialize(ss["juegosjava_atlas_1"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Mapadebits1_1 = function() {
-	this.initialize(img.Mapadebits1_1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,427,376);
+	this.initialize(ss["juegosjava_atlas_1"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Mapadebits2 = function() {
-	this.initialize(img.Mapadebits2);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,444,354);// helper functions:
+	this.initialize(ss["juegosjava_atlas_1"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -2221,9 +2226,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Mapadebits1.png?1741187217188", id:"Mapadebits1"},
-		{src:"images/Mapadebits1_1.png?1741187217188", id:"Mapadebits1_1"},
-		{src:"images/Mapadebits2.png?1741187217188", id:"Mapadebits2"}
+		{src:"images/juegosjava_atlas_1.png?1741268848086", id:"juegosjava_atlas_1"}
 	],
 	preloads: []
 };
