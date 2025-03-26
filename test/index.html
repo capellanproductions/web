@@ -25,6 +25,10 @@
             font-size: 18px;
             color: black;
             padding: 10px;
+            align-self: flex-start;
+            text-align: left;
+            width: 100%;
+            padding-left: 10px;
         }
         .boton {
             width: 225px;
@@ -41,23 +45,7 @@
 </head>
 <body>
     <img src="1.png" alt="Producto" class="producto-img">
-    <div class="titulo" id="titulo"></div>
-    <div class="boton" id="precio"></div>
-
-    <script>
-        // Función para cargar el contenido desde un archivo de texto
-        function cargarArchivo(id, archivo) {
-            fetch(archivo)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).textContent = data;
-                })
-                .catch(error => console.error('Error al cargar el archivo:', error));
-        }
-
-        // Cargar los archivos de texto
-        cargarArchivo('titulo', 'titulo.txt');
-        cargarArchivo('precio', 'precio.txt');
-    </script>
+    <div class="titulo">TÍTULO AQUÍ</div>
+    <div class="boton">PRECIO AQUÍ</div>
 </body>
 </html>
