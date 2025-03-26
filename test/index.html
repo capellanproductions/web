@@ -30,6 +30,19 @@
             left: 0;
             width: 100%;
             text-align: left;
+            font-weight: normal;
+        }
+        .descripcion {
+            font-size: 14px;
+            color: gray;
+            position: absolute;
+            top: 340px;
+            left: 0;
+            width: 100%;
+            text-align: left;
+            overflow: hidden;
+            max-height: 120px;
+            padding-right: 10px;
         }
         .boton {
             width: 225px;
@@ -41,26 +54,11 @@
             color: white;
             font-size: 16px;
             font-weight: bold;
+            position: absolute;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
     <img src="1.png" alt="Producto" class="producto-img">
     <div class="titulo" id="titulo"></div>
-    <div class="boton" id="precio"></div>
-
-    <script>
-        function cargarArchivo(id, archivo) {
-            fetch(archivo)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).textContent = data;
-                })
-                .catch(error => console.error('Error al cargar el archivo:', error));
-        }
-
-        cargarArchivo('titulo', 'titulo.txt');
-        cargarArchivo('precio', 'precio.txt');
-    </script>
-</body>
-</html>
