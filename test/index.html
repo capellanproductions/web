@@ -15,6 +15,7 @@
             justify-content: space-between;
             text-align: center;
             font-family: Arial, sans-serif;
+            position: relative;
         }
         .producto-img {
             width: 300px;
@@ -24,11 +25,11 @@
         .titulo {
             font-size: 18px;
             color: black;
-            padding: 10px;
-            align-self: flex-start;
+            position: absolute;
+            top: 310px;
+            left: 10px;
+            width: 280px;
             text-align: left;
-            width: 100%;
-            padding-left: 10px;
         }
         .boton {
             width: 225px;
@@ -45,7 +46,21 @@
 </head>
 <body>
     <img src="1.png" alt="Producto" class="producto-img">
-    <div class="titulo">TÍTULO AQUÍ</div>
-    <div class="boton">PRECIO AQUÍ</div>
+    <div class="titulo" id="titulo"></div>
+    <div class="boton" id="precio"></div>
+
+    <script>
+        function cargarArchivo(id, archivo) {
+            fetch(archivo)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).textContent = data;
+                })
+                .catch(error => console.error('Error al cargar el archivo:', error));
+        }
+
+        cargarArchivo('titulo', 'titulo.txt');
+        cargarArchivo('precio', 'precio.txt');
+    </script>
 </body>
 </html>
