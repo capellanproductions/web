@@ -15,10 +15,20 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: flex-start;
-            gap: 20px 20px;
+            gap: 30px 20px;
         }
 
-    
+        /* Contenedor del iframe superior */
+        .top-iframe {
+            width: 1050px;
+            height: 520px;
+            background: white;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0px; /* Espacio entre el iframe superior y los demás */
+        }
 
         /* Estilos del iframe superior */
         .top-iframe iframe {
@@ -55,7 +65,10 @@
 </head>
 <body>
 
-
+    <!-- Iframe superior -->
+    <div class="top-iframe">
+        <iframe src="top.png" scrolling="no"></iframe>
+    </div>
 
     <!-- Iframes pequeños -->
     <div class="iframe-container"><iframe data-src="p1/index.html" scrolling="no"></iframe></div>
@@ -67,7 +80,6 @@
     <div class="iframe-container"><iframe data-src="p7/index.html" scrolling="no"></iframe></div>
     <div class="iframe-container"><iframe data-src="p8/index.html" scrolling="no"></iframe></div>
     <div class="iframe-container"><iframe data-src="p9/index.html" scrolling="no"></iframe></div>
-	<div class="iframe-container"><iframe data-src="p10/index.html" scrolling="no"></iframe></div>
 
     <script>
         function loadIframes() {
