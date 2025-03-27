@@ -20,7 +20,6 @@
             background: #F1F1F1;
             border-radius: 20px;
             overflow: hidden;
-            
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -66,6 +65,7 @@
             padding: 15px;
             cursor: pointer;
             flex-grow: 1;
+            position: relative;
         }
         .titulo {
             font-size: 30px;
@@ -78,6 +78,7 @@
             color: gray;
             max-height: 100px;
             overflow: hidden;
+            line-height: 1.4;
         }
         .boton {
             width: 225px;
@@ -99,7 +100,6 @@
 </head>
 <body>
     <div class="contenedor">
-        <!-- Slider con imágenes -->
         <div class="slider">
             <img src="1.png" class="imagen" style="transform: translateX(0%);">
             <img src="2.png" class="imagen" style="transform: translateX(100%);">
@@ -138,13 +138,33 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById(id).textContent = data;
+                    ajustarDescripcion();
                 })
                 .catch(error => console.error('Error al cargar el archivo:', error));
+        }
+
+        function ajustarDescripcion() {
+            const descripcion = document.getElementById("descripcion");
+            const boton = document.querySelector(".boton");
+            
+            if (!descripcion || !boton) return;
+
+            let textoCompleto = descripcion.textContent;
+            let palabras = textoCompleto.split(" ");
+
+            while (descripcion.offsetHeight + boton.offsetHeight > boton.offsetTop) {
+                palabras.pop();
+                descripcion.textContent = palabras.join(" ") + "...";
+
+                if (palabras.length === 0) break;
+            }
         }
 
         cargarArchivo('titulo', 'titulo.txt');
         cargarArchivo('descripcion', 'descripcion.txt');
         cargarArchivo('precio', 'precio.txt');
+
+        window.addEventListener("resize", ajustarDescripcion);
     </script>
 </body>
 </html>
