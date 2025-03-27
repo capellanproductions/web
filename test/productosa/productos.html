@@ -5,37 +5,18 @@
     <meta name="viewport" content="width=1050, initial-scale=1.0">
     <title>Productos</title>
     <style>
-        /* Contenedor principal */
+        /* Configuración del cuerpo */
         body {
-            width: 100vw; 
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        /* Contenedor que mantiene el tamaño fijo */
-        .web-container {
             width: 1050px;
             height: 1600px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
-            gap: 10px;
-            background: white;
+            margin: 0 auto;
             padding: 20px;
-            box-sizing: border-box;
-            transform-origin: top center;
-        }
-
-        /* Ajuste de escala para que la web siempre encaje horizontalmente */
-        @media screen and (max-width: 1050px) {
-            .web-container {
-                transform: scale(calc(100vw / 1050));
-            }
+            background-color: #f5f5f5;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
         }
 
         /* Contenedor de los iframes */
@@ -43,10 +24,10 @@
             width: 300px;
             height: 520px;
             background: white;
+            overflow: hidden; /* Evita cualquier desbordamiento */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
         }
 
         /* Estilos para los iframes */
@@ -54,6 +35,8 @@
             width: 100%;
             height: 100%;
             border: none;
+            margin: 0;
+            overflow: hidden; /* Asegura que no haya scroll */
             opacity: 0;
             transition: opacity 1.5s ease-in-out;
         }
@@ -66,17 +49,15 @@
 </head>
 <body>
 
-    <div class="web-container">
-        <div class="iframe-container"><iframe data-src="p1/index.html" scrolling="no"></iframe></div>
-        <div class="iframe-container"><iframe data-src="p2/index.html" scrolling="no"></iframe></div>
-        <div class="iframe-container"><iframe data-src="p3/index.html" scrolling="no"></iframe></div>
-        <div class="iframe-container"><iframe data-src="p4/index.html" scrolling="no"></iframe></div>
-        <div class="iframe-container"><iframe data-src="p5/index.html" scrolling="no"></iframe></div>
-        <div class="iframe-container"><iframe data-src="p6/index.html" scrolling="no"></iframe></div>
-        <div class="iframe-container"><iframe data-src="p7/index.html" scrolling="no"></iframe></div>
-        <div class="iframe-container"><iframe data-src="p8/index.html" scrolling="no"></iframe></div>
-        <div class="iframe-container"><iframe data-src="p9/index.html" scrolling="no"></iframe></div>
-    </div>
+    <div class="iframe-container"><iframe data-src="p1/index.html" scrolling="no"></iframe></div>
+    <div class="iframe-container"><iframe data-src="p2/index.html" scrolling="no"></iframe></div>
+    <div class="iframe-container"><iframe data-src="p3/index.html" scrolling="no"></iframe></div>
+    <div class="iframe-container"><iframe data-src="p4/index.html" scrolling="no"></iframe></div>
+    <div class="iframe-container"><iframe data-src="p5/index.html" scrolling="no"></iframe></div>
+    <div class="iframe-container"><iframe data-src="p6/index.html" scrolling="no"></iframe></div>
+    <div class="iframe-container"><iframe data-src="p7/index.html" scrolling="no"></iframe></div>
+    <div class="iframe-container"><iframe data-src="p8/index.html" scrolling="no"></iframe></div>
+    <div class="iframe-container"><iframe data-src="p9/index.html" scrolling="no"></iframe></div>
 
     <script>
         function loadIframes() {
