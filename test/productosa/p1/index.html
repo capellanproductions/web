@@ -20,7 +20,6 @@
             background: #F1F1F1;
             border-radius: 20px;
             overflow: hidden;
-            
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -78,6 +77,11 @@
             color: gray;
             max-height: 100px;
             overflow: hidden;
+            position: absolute; /* Posición absoluta */
+            bottom: 75px; /* Ajusta la distancia al botón */
+            left: 50%; /* Centrado horizontal */
+            transform: translateX(-50%); /* Centrado horizontal */
+            width: 90%; /* Asegura que el texto no sobrepase los límites */
         }
         .boton {
             width: 225px;
