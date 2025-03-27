@@ -16,10 +16,11 @@
         }
         .contenedor {
             width: 510px;
-            height: 750px;
+            height: 770px;
             background: #F1F1F1;
             border-radius: 20px;
             overflow: hidden;
+            
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -75,12 +76,8 @@
         .descripcion {    
             font-size: 20px;
             color: gray;
-            max-height: 610px; /* Limite de altura para no pasar el borde del botón */
+            max-height: 100px;
             overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 5; /* Número máximo de líneas */
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis; /* Agrega '...' al final si se corta */
         }
         .boton {
             width: 225px;
@@ -136,7 +133,6 @@
             });
         }
 
-        // Cargar archivos de texto (título, descripción, precio)
         function cargarArchivo(id, archivo) {
             fetch(archivo)
                 .then(response => response.text())
@@ -146,25 +142,9 @@
                 .catch(error => console.error('Error al cargar el archivo:', error));
         }
 
-        // Ajuste dinámico de la descripción si excede el espacio disponible
-        function ajustarDescripcion() {
-            const descripcion = document.getElementById("descripcion");
-            const boton = document.querySelector(".boton");
-
-            let limiteAltura = boton.offsetTop; // Posición Y del botón
-            let textoCompleto = descripcion.textContent;
-
-            while (descripcion.offsetHeight > limiteAltura - 20) { 
-                descripcion.textContent = descripcion.textContent.slice(0, -5) + "..."; 
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            cargarArchivo('titulo', 'titulo.txt');
-            cargarArchivo('descripcion', 'descripcion.txt');
-            cargarArchivo('precio', 'precio.txt');
-            setTimeout(ajustarDescripcion, 500); // Espera que cargue el texto antes de cortar
-        });
+        cargarArchivo('titulo', 'titulo.txt');
+        cargarArchivo('descripcion', 'descripcion.txt');
+        cargarArchivo('precio', 'precio.txt');
     </script>
 </body>
 </html>
