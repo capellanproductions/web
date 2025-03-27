@@ -65,7 +65,6 @@
             padding: 15px;
             cursor: pointer;
             flex-grow: 1;
-            position: relative;
         }
         .titulo {
             font-size: 30px;
@@ -76,9 +75,12 @@
         .descripcion {    
             font-size: 20px;
             color: gray;
-            max-height: 100px;
+            max-height: 610px; /* Limite de altura para no pasar el borde del botón */
             overflow: hidden;
-            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 5; /* Número máximo de líneas */
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis; /* Agrega '...' al final si se corta */
         }
         .boton {
             width: 225px;
@@ -100,6 +102,7 @@
 </head>
 <body>
     <div class="contenedor">
+        <!-- Slider con imágenes -->
         <div class="slider">
             <img src="1.png" class="imagen" style="transform: translateX(0%);">
             <img src="2.png" class="imagen" style="transform: translateX(100%);">
@@ -133,38 +136,35 @@
             });
         }
 
+        // Cargar archivos de texto (título, descripción, precio)
         function cargarArchivo(id, archivo) {
             fetch(archivo)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById(id).textContent = data;
-                    ajustarDescripcion();
                 })
                 .catch(error => console.error('Error al cargar el archivo:', error));
         }
 
+        // Ajuste dinámico de la descripción si excede el espacio disponible
         function ajustarDescripcion() {
             const descripcion = document.getElementById("descripcion");
             const boton = document.querySelector(".boton");
-            
-            if (!descripcion || !boton) return;
 
+            let limiteAltura = boton.offsetTop; // Posición Y del botón
             let textoCompleto = descripcion.textContent;
-            let palabras = textoCompleto.split(" ");
 
-            while (descripcion.offsetHeight + boton.offsetHeight > boton.offsetTop) {
-                palabras.pop();
-                descripcion.textContent = palabras.join(" ") + "...";
-
-                if (palabras.length === 0) break;
+            while (descripcion.offsetHeight > limiteAltura - 20) { 
+                descripcion.textContent = descripcion.textContent.slice(0, -5) + "..."; 
             }
         }
 
-        cargarArchivo('titulo', 'titulo.txt');
-        cargarArchivo('descripcion', 'descripcion.txt');
-        cargarArchivo('precio', 'precio.txt');
-
-        window.addEventListener("resize", ajustarDescripcion);
+        document.addEventListener("DOMContentLoaded", () => {
+            cargarArchivo('titulo', 'titulo.txt');
+            cargarArchivo('descripcion', 'descripcion.txt');
+            cargarArchivo('precio', 'precio.txt');
+            setTimeout(ajustarDescripcion, 500); // Espera que cargue el texto antes de cortar
+        });
     </script>
 </body>
 </html>
