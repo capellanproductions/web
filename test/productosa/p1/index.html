@@ -141,7 +141,9 @@
             fetch(archivo)
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById(id).textContent = data;
+                    // Limitar a 122 caracteres y agregar "..."
+                    const textoCorto = data.length > 122 ? data.substring(0, 122) + "..." : data;
+                    document.getElementById(id).textContent = textoCorto;
                 })
                 .catch(error => console.error('Error al cargar el archivo:', error));
         }
