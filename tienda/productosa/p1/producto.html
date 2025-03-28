@@ -81,22 +81,23 @@
             position: relative;
             width: 100%;
         }
-		.precio {
-			font-size: 60px;
-			color: black;
-			margin-top: 10px;
-			font-weight: bold;
-			background: #E0E0E0; /* Gris claro */
-			padding: 20px;
-			border-radius: 25px;
-			display: flex;
-			justify-content: flex-end; /* Alinea el texto a la derecha */
-			align-items: center;
-			width: auto; /* El recuadro se ajustará al contenido */
-			max-width: 30%; /* Puede ajustar el recuadro al 90% del ancho del contenedor */
-			box-sizing: border-box; /* Evita que el padding afecte el tamaño */
-		}
-
+        .precio {
+            font-size: 60px;
+            color: black;
+            text-align: right;
+            margin-top: 10px;
+            font-weight: bold;
+            padding: 20px;
+            background: url('fondoprecio.png') no-repeat center center;
+            background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+            border-radius: 15px;
+            max-width: 90%;
+            width: auto;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
