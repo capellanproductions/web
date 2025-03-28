@@ -10,8 +10,8 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Asegura que el contenido inicie desde arriba */
-            min-height: 100vh; /* Permite que el contenido crezca si es más alto */
+            align-items: flex-start;
+            min-height: 100vh;
             background-color: white;
             font-family: Arial, sans-serif;
         }
@@ -19,7 +19,6 @@
             width: 1050px;
             height: 1586px;
             background: #F1F1F1;
-            border-radius: 20px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -52,38 +51,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%;
             cursor: pointer;
             user-select: none;
         }
-        .izquierda {
-            left: 10px;
-        }
-        .derecha {
-            right: 10px;
-        }
+        .izquierda { left: 10px; }
+        .derecha { right: 10px; }
         .info {
             width: 90%;
             padding: 15px;
             cursor: pointer;
-            flex-grow: 1;
+            text-align: center;
         }
         .titulo {
             font-size: 30px;
             color: black;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
-        .descripcion {    
+        .descripcion {
             font-size: 20px;
             color: gray;
-            max-height: 100px;
-            overflow: hidden;
-            position: absolute;
-            bottom: 70px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
+            width: 100%;
         }
         .boton {
             width: 225px;
@@ -105,7 +93,6 @@
 </head>
 <body>
     <div class="contenedor">
-        <!-- Slider con imágenes -->
         <div class="slider">
             <img src="1.png" class="imagen" style="transform: translateX(0%);" onclick="cambiarImagen(1)">
             <img src="2.png" class="imagen" style="transform: translateX(100%);" onclick="cambiarImagen(1)">
@@ -113,41 +100,33 @@
             <div class="flecha izquierda" onclick="cambiarImagen(-1)">‹</div>
             <div class="flecha derecha" onclick="cambiarImagen(1)">›</div>
         </div>
-
         <div class="info" onclick="window.top.location.href='producto.html'">
             <div class="titulo" id="titulo"></div>
             <div class="descripcion" id="descripcion"></div>
         </div>
         <div class="boton" id="precio" onclick="window.top.location.href='producto.html'"></div>
     </div>
-
     <script>
         let index = 0; 
         const imagenes = document.querySelectorAll(".imagen");
 
-        // Función para cambiar la imagen
         function cambiarImagen(direccion) {
             index += direccion;
-
             if (index < 0) {
                 index = imagenes.length - 1;
             } else if (index >= imagenes.length) {
                 index = 0;
             }
-
             imagenes.forEach((img, i) => {
                 img.style.transform = `translateX(${(i - index) * 100}%)`;
             });
         }
 
-        // Cargar archivos
         function cargarArchivo(id, archivo) {
             fetch(archivo)
                 .then(response => response.text())
                 .then(data => {
-                    // Limitar a 122 caracteres y agregar "..."
-                    const textoCorto = data.length > 122 ? data.substring(0, 122) + "..." : data;
-                    document.getElementById(id).textContent = textoCorto;
+                    document.getElementById(id).textContent = data;
                 })
                 .catch(error => console.error('Error al cargar el archivo:', error));
         }
