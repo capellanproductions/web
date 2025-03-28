@@ -2,30 +2,33 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Web2</title>
+    
+    <meta property="og:title" content="Los Mejores Productos">
+    <meta property="og:description" content="tienda">
+    <meta property="og:image" content="https://lacosanostrackstudio.github.io/webs/viralsoundsocial/flayer.jpg">
+    <title>Los Mejores Productos</title>
     <style>
+        /* Estilos para los iframes */
         iframe {
-            width: 1050px;
-            border: none;
-            display: block;
-            margin: 0 auto;
+            border: none; /* Elimina los bordes */
+            display: block; /* Hace que los iframes se apilen uno encima del otro */
+            margin: 0 auto; /* Centra los iframes horizontalmente */
         }
     </style>
 </head>
 <body>
 
-    <!-- Cargar la imagen top.png en un iframe -->
-    <iframe src="top.png" height="200"></iframe>
+    <!-- Primer iframe -->
+    <iframe src="top.png" width="1050" height="600" scrolling="no"></iframe>
 
-    <!-- Cargar la imagen borde.png en un iframe -->
-    <iframe src="borde.png" height="200"></iframe>
+    <!-- Segundo iframe -->
+    <iframe src="borde.png" width="1050" height="80" scrolling="no"></iframe>
 
-    <!-- Cargar el archivo productos.html en un iframe -->
-    <iframe src="productosa/productos.html" height="600"></iframe>
+    <!-- Tercer iframe -->
+    <iframe src="productosa/productos.html" width="1050" height="4100" scrolling="no"></iframe>
 
-    <!-- Cargar la imagen bot.png en un iframe -->
-    <iframe src="bot.png" height="200"></iframe>
+    <!-- Cuarto iframe -->
+    <iframe src="bot.png" width="1050" height="372" scrolling="no"></iframe>
 
 </body>
 </html>
