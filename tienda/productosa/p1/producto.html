@@ -18,7 +18,7 @@
         .contenedor {
             width: 1050px;
             height: 1586px;
-            background: #F1F1F1;
+            background: white;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -45,13 +45,13 @@
             transform: translateY(-50%);
             background: rgba(0, 0, 0, 0.7);
             color: white;
-            font-size: 80px; /* Tamaño del icono más grande */
-            width: 120px; /* Doble del tamaño */
+            font-size: 80px;
+            width: 120px;
             height: 120px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%; /* Hacerlo completamente redondo */
+            border-radius: 50%;
             cursor: pointer;
             user-select: none;
         }
@@ -65,26 +65,26 @@
             width: 90%;
             padding: 15px;
             flex-grow: 1;
-            text-align: left; /* Asegura que todo el texto esté alineado a la izquierda */
+            text-align: left;
         }
         .titulo {
             font-size: 40px;
             color: black;
             font-weight: bold;
             margin-bottom: 5px;
-            text-align: left; /* Alineación a la izquierda */
+            text-align: left;
         }
         .descripcion {    
             font-size: 30px;
-            color: black;
-            text-align: left; /* Alineación a la izquierda */
+            color: gray;
+            text-align: left;
             position: relative;
             width: 100%;
         }
         .precio {
             font-size: 60px;
             color: black;
-            text-align: right; /* Alineado a la derecha */
+            text-align: right;
             margin-top: 10px;
             font-weight: bold;
         }
@@ -92,7 +92,6 @@
 </head>
 <body>
     <div class="contenedor">
-        <!-- Slider con imágenes -->
         <div class="slider">
             <img src="1.png" class="imagen" style="transform: translateX(0%);" onclick="cambiarImagen(1)">
             <img src="2.png" class="imagen" style="transform: translateX(100%);" onclick="cambiarImagen(1)">
@@ -100,7 +99,6 @@
             <div class="flecha izquierda" onclick="cambiarImagen(-1)">‹</div>
             <div class="flecha derecha" onclick="cambiarImagen(1)">›</div>
         </div>
-
         <div class="info">
             <div class="titulo" id="titulo"></div>
             <div class="descripcion" id="descripcion"></div>
@@ -112,23 +110,18 @@
         let index = 0; 
         const imagenes = document.querySelectorAll(".imagen");
 
-        // Función para cambiar la imagen
         function cambiarImagen(direccion) {
             index += direccion;
-
             if (index < 0) {
                 index = imagenes.length - 1;
             } else if (index >= imagenes.length) {
                 index = 0;
             }
-
             imagenes.forEach((img, i) => {
                 img.style.transform = `translateX(${(i - index) * 100}%)`;
             });
         }
 
-
-        // Cargar archivos
         function cargarArchivo(id, archivo) {
             fetch(archivo)
                 .then(response => response.text())
