@@ -9,8 +9,9 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
             background-color: white;
             font-family: Arial, sans-serif;
         }
@@ -65,8 +66,6 @@
             padding: 15px;
             flex-grow: 1;
             text-align: left;
-            display: flex;
-            flex-direction: column;
         }
         .titulo {
             font-size: 40px;
@@ -92,22 +91,12 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            padding-right: 20px;
+            padding-right: 20px; /* Para ajustar el texto y el fondo */
             background-image: url('fondoprecio.png');
             background-repeat: no-repeat;
-            background-size: contain;
-            background-position: right center;
-            height: 80px;
-        }
-        .iframe-container {
-            width: 1050px;
-            display: flex;
-            justify-content: center;
-        }
-        iframe {
-            width: 1050px;
-            height: 400px;
-            border: none;
+            background-size: contain; /* Evita que la imagen se estire */
+            background-position: right center; /* Alinea la imagen a la derecha */
+            height: 80px; /* Ajusta la altura según el tamaño de la imagen */
         }
     </style>
 </head>
@@ -125,10 +114,10 @@
             <div class="descripcion" id="descripcion"></div>
             <div class="precio" id="precio"></div>
         </div>
-        <div class="iframe-container">
-            <iframe src="agregador.html"></iframe>
-        </div>
     </div>
+
+    <!-- Agregar el archivo agregador.html debajo -->
+    <iframe src="agregador.html" width="1050" height="400" style="border:none;"></iframe>
 
     <script>
         let index = 0; 

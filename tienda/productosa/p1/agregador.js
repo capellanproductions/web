@@ -27,14 +27,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_6copia = function() {
+(lib.CachedBmp_6 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_5copia = function() {
+(lib.CachedBmp_5 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -422,7 +422,7 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.Símbolo11();
 	this.instance.setTransform(212.55,42.2,0.199,0.199,0,0,0,110.8,101.8);
 
-	this.instance_1 = new lib.CachedBmp_6copia();
+	this.instance_1 = new lib.CachedBmp_6();
 	this.instance_1.setTransform(49.45,20.15,0.5,0.5);
 
 	this.instance_2 = new lib.Símbolo8();
@@ -447,7 +447,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_5copia();
+	this.instance = new lib.CachedBmp_5();
 	this.instance.setTransform(11.4,19.8,0.5,0.5);
 
 	this.instance_1 = new lib.Símbolo9();
@@ -575,7 +575,7 @@ if (reversed == null) { reversed = false; }
 		});
 		
 		/////////////// Carga el precio //////
-		fetch("precio.txt")
+		fetch("./precio.txt")
 		    .then(response => response.text())  // Leer el contenido del archivo
 		    .then(data => {
 		        this.precio.text = data; // Asignar el contenido al campo de texto
@@ -705,19 +705,19 @@ if (reversed == null) { reversed = false; }
 	// Capa_1
 	this.pedido6 = new lib.Símbolo16();
 	this.pedido6.name = "pedido6";
-	this.pedido6.setTransform(835.55,332.8,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido6.setTransform(835.55,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.pedido5 = new lib.Símbolo16();
 	this.pedido5.name = "pedido5";
-	this.pedido5.setTransform(775.9,332.8,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido5.setTransform(775.9,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.pedido4 = new lib.Símbolo16();
 	this.pedido4.name = "pedido4";
-	this.pedido4.setTransform(717.05,332.8,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido4.setTransform(717.05,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.pedido3 = new lib.Símbolo16();
 	this.pedido3.name = "pedido3";
-	this.pedido3.setTransform(656.65,332.8,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido3.setTransform(656.65,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.numerodepedido = new cjs.Text("", "20px 'Arial'");
 	this.numerodepedido.name = "numerodepedido";
@@ -725,29 +725,29 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(648.75,230.5);
+	this.numerodepedido.setTransform(648.75,430.4);
 
 	this.pedido2 = new lib.Símbolo16();
 	this.pedido2.name = "pedido2";
-	this.pedido2.setTransform(597.7,332.8,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido2.setTransform(597.7,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.pedido1 = new lib.Símbolo16();
 	this.pedido1.name = "pedido1";
-	this.pedido1.setTransform(538.15,332.8,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido1.setTransform(538.15,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.nota = new cjs.Text("", "20px 'Arial'");
 	this.nota.name = "nota";
 	this.nota.lineHeight = 24;
 	this.nota.lineWidth = 532;
 	this.nota.parent = this;
-	this.nota.setTransform(328.5,73.4);
+	this.nota.setTransform(328.5,-91.85);
 
 	this.producto = new cjs.Text("", "20px 'Arial'");
 	this.producto.name = "producto";
 	this.producto.lineHeight = 24;
 	this.producto.lineWidth = 532;
 	this.producto.parent = this;
-	this.producto.setTransform(328.5,8);
+	this.producto.setTransform(328.5,-157.25);
 
 	this.instance = new lib.CachedBmp_4();
 	this.instance.setTransform(12.5,297.5,0.5,0.5);
@@ -798,7 +798,7 @@ if (reversed == null) { reversed = false; }
 	this.precio.lineHeight = 24;
 	this.precio.lineWidth = 90;
 	this.precio.parent = this;
-	this.precio.setTransform(770.9,41.2);
+	this.precio.setTransform(770.9,-124.05);
 
 	this.btmenos = new lib.Símbolo6();
 	this.btmenos.name = "btmenos";
@@ -837,7 +837,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(528.3,202.3,521.7,188.39999999999998);
+p.nominalBounds = new cjs.Rectangle(528.3,40.8,521.7,549.8000000000001);
 // library properties:
 lib.properties = {
 	id: '9F15C8B2AD83954C8BE150CA09864886',
@@ -847,10 +847,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/agregador_atlas_1.png?1743251146757", id:"agregador_atlas_1"},
-		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1743251146803", id:"lib/jquery-3.4.1.min.js"},
-		{src:"components/sdk/anwidget.js?1743251146803", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1743251146803", id:"an.TextInput"}
+		{src:"images/agregador_atlas_1.png?1743252095531", id:"agregador_atlas_1"},
+		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1743252095579", id:"lib/jquery-3.4.1.min.js"},
+		{src:"components/sdk/anwidget.js?1743252095579", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1743252095579", id:"an.TextInput"}
 	],
 	preloads: []
 };
