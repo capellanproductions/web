@@ -91,12 +91,12 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            padding-right: 20px; /* Para ajustar el texto y el fondo */
+            padding-right: 20px;
             background-image: url('fondoprecio.png');
             background-repeat: no-repeat;
-            background-size: contain; /* Evita que la imagen se estire */
-            background-position: right center; /* Alinea la imagen a la derecha */
-            height: 80px; /* Ajusta la altura según el tamaño de la imagen */
+            background-size: contain;
+            background-position: right center;
+            height: 80px;
         }
     </style>
 </head>
@@ -132,19 +132,19 @@
             });
         }
 
-        function cargarArchivo(id, archivo) {
+        function cargarArchivo(id, archivo, esPrecio = false) {
             fetch(archivo)
                 .then(response => response.text())
                 .then(data => {
                     console.log(`Contenido de ${archivo}:`, data);
-                    document.getElementById(id).textContent = data;
+                    document.getElementById(id).textContent = esPrecio ? `$` + data.trim() : data;
                 })
                 .catch(error => console.error('Error al cargar el archivo:', error));
         }
 
         cargarArchivo('titulo', 'titulo.txt');
         cargarArchivo('descripcion', 'descripcion.txt');
-        cargarArchivo('precio', 'precio.txt');
+        cargarArchivo('precio', 'precio.txt', true);
     </script>
 </body>
 </html>
