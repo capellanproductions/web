@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"agregador_atlas_1", frames: [[0,268,282,82],[0,184,504,82],[0,125,812,57],[506,184,210,75],[284,268,288,75],[0,0,856,123]]}
+		{name:"agregador_atlas_1", frames: [[506,59,432,75],[506,136,282,82],[0,59,504,82],[0,0,812,57],[290,143,210,75],[0,143,288,75]]}
 ];
 
 
@@ -27,42 +27,42 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_6 = function() {
+(lib.CachedBmp_26 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_5 = function() {
+(lib.CachedBmp_25 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_4 = function() {
+(lib.CachedBmp_24 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_3 = function() {
+(lib.CachedBmp_22 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_2 = function() {
+(lib.CachedBmp_21 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_1 = function() {
+(lib.CachedBmp_20 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
@@ -97,6 +97,51 @@ p._handleDrawEnd = _handleDrawEnd;
 p._updateVisibility = _updateVisibility;
 p.draw = _componentDraw;
 
+
+
+(lib.Símbolo21 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#999999").ss(1,1,1).p("A/zmAMA/nAAAQBkAAAABkIAAI5QAABkhkAAMg/nAAAQhkAAAAhkIAAo5QAAhkBkAAg");
+	this.shape.setTransform(213.6,38.45);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo21, new cjs.Rectangle(-1,-1,429.2,78.9), null);
+
+
+(lib.Símbolo20 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.instance = new lib.CachedBmp_26();
+	this.instance.setTransform(0,0,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo20, new cjs.Rectangle(0,0,216,37.5), null);
 
 
 (lib.Símbolo18 = function(mode,startPosition,loop,reversed) {
@@ -376,6 +421,37 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,0,4.7,28.4), null);
 
 
+(lib.Símbolo19 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(55));
+
+	// Capa_1
+	this.instance = new lib.Símbolo20();
+	this.instance.setTransform(-116.95,-134.2,1,1,0,0,0,108,18.8);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({x:108,y:23.8,alpha:0},0).to({alpha:1},13).wait(25).to({alpha:0},15).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-224.9,-153,440.9,195.5);
+
+
 (lib.Símbolo17 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -422,7 +498,7 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.Símbolo11();
 	this.instance.setTransform(212.55,42.2,0.199,0.199,0,0,0,110.8,101.8);
 
-	this.instance_1 = new lib.CachedBmp_6();
+	this.instance_1 = new lib.CachedBmp_25();
 	this.instance_1.setTransform(49.45,20.15,0.5,0.5);
 
 	this.instance_2 = new lib.Símbolo8();
@@ -447,7 +523,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_5();
+	this.instance = new lib.CachedBmp_24();
 	this.instance.setTransform(11.4,19.8,0.5,0.5);
 
 	this.instance_1 = new lib.Símbolo9();
@@ -590,24 +666,77 @@ if (reversed == null) { reversed = false; }
 		    })
 		    .catch(error => console.error("Error al cargar titulo.txt:", error));
 		
-		
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		/////////////// Agregar unidades al carrito y actualizar el total //////
 		this.agregar.addEventListener("click", () => {
+		    let numerodepedido = parseInt(this.numerodepedido.text); // Obtener el número de pedido
+		
+		    if (numerodepedido >= 11) {
+		        this.carritolleno.play(); // Reproducir el sonido de carrito lleno
+		        return; // Detener la ejecución para que no se agregue más
+		    }
+		
 		    let unidades = parseInt(this.unidades.text);  // Obtener el valor de unidades
 		    let unidadesCarrito = parseInt(this.unidadescarrito.text);  // Obtener el valor actual del carrito
 		    this.unidadescarrito.text = unidades + unidadesCarrito;  // Sumar las unidades al carrito
-			//nota igual a notaadicional//
+			
+			// nota igual a notaadicional
 			this.nota.text = document.getElementById("notaadicional").value;
+		
 		    // Obtener el precio y el total
-		    let precio = parseFloat(this.precio.text);  // Obtener el valor del precio (asegúrate de que sea un número)
-		    let total = parseFloat(this.total.text);    // Obtener el valor actual del total
-			this.like.play();
-		    // Sumar el precio multiplicado por las unidades al total
-		    this.total.text = (precio * unidades) + total;  // Actualiza el total
+		    let precio = parseFloat(this.precio.text);  // Asegurar que sea un número
+		    let total = parseFloat(this.total.text.replace("$", ""));  // Remover el signo $ para operar correctamente
+		
+		    this.like.play(); // Reproducir el sonido de like solo si no se ha alcanzado el límite
+		
+		    // Sumar el precio multiplicado por las unidades al total y actualizarlo con el signo $
+		    this.total.text = "$" + ((precio * unidades) + total);
+		});
+		
+		// Evento para incrementar el número de pedido al hacer clic en el botón "pedirya"
+		this.agregar.addEventListener("click", () => {
+		    let numerodepedido = parseInt(this.numerodepedido.text); // Obtener el número de pedido
+		
+		    if (numerodepedido >= 11) {
+		        return; // No incrementar más si ya llegó al límite
+		    }
+		
+		    // Incrementar el valor de numerodepedido
+		    this.numerodepedido.text = numerodepedido + 1;
+		
+		    // Guardar el nuevo valor en localStorage
+		    localStorage.setItem('datos1', this.numerodepedido.text);
+		    localStorage.setItem('total', this.total.text);
+		    localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
+		
+		    // Actualizar el tiempo guardado en localStorage
+		    localStorage.setItem('tiempoGuardado', Date.now().toString());
+		});
+		
+		// Evento para agregar los datos al hacer clic en el botón "agregar"
+		this.agregar.addEventListener("click", () => {
+		    let numeroPedido = parseInt(this.numerodepedido.text);
+		
+		    // Verificar si el número de pedido está dentro del rango (1 a 10)
+		    if (numeroPedido >= 1 && numeroPedido <= 11) {
+		        // Guardar la información en localStorage con claves dinámicas basadas en el número de pedido
+		        localStorage.setItem('producto' + numeroPedido, this.producto.text);
+		        localStorage.setItem('precio' + numeroPedido, this.precio.text);
+		        localStorage.setItem('nota' + numeroPedido, this.nota.text);
+		        localStorage.setItem('unidades' + numeroPedido, this.unidades.text);
+		        
+		        console.log('Datos guardados para el pedido ' + numeroPedido);
+		    } else {
+		        console.log('Número de pedido fuera de rango');
+		    }
 		});
 		
 		
-		//////////////////////////////
+		
+		
+		
+		
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// Al abrir la página, obtener el número de pedido desde localStorage
 		var numeroPedidoGuardado = localStorage.getItem('datos1');
 		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
@@ -615,6 +744,7 @@ if (reversed == null) { reversed = false; }
 		
 		// Verifica si 'total' existe en localStorage, si no, asigna "0"
 		this.total.text = localStorage.getItem('total') ? localStorage.getItem('total') : "0";
+		
 		
 		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
 		this.unidadescarrito.text = localStorage.getItem('unidadescarrito') ? localStorage.getItem('unidadescarrito') : "0";
@@ -643,21 +773,7 @@ if (reversed == null) { reversed = false; }
 		        this.numerodepedido.text = numeroPedidoGuardado;  // Asignar el valor guardado
 		    }
 		}
-		
-		// Evento para incrementar el número de pedido al hacer clic en el botón "pedirya"
-		this.agregar.addEventListener("click", () => {
-		    // Incrementar el valor de numerodepedido
-		    this.numerodepedido.text = parseInt(this.numerodepedido.text) + 1;
-		
-		    // Guardar el nuevo valor en localStorage
-		    localStorage.setItem('datos1', this.numerodepedido.text);
-			localStorage.setItem('total', this.total.text);
-			localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
-		
-		    // Actualizar el tiempo guardado en localStorage
-		    localStorage.setItem('tiempoGuardado', Date.now().toString());
-		});
-		for (let i = 1; i <= 6; i++) {
+		for (let i = 1; i <= 11; i++) {
 		        // Obtener los valores desde localStorage para cada campo
 		        let producto = localStorage.getItem('producto' + i);
 		        let precio = localStorage.getItem('precio' + i);
@@ -678,46 +794,50 @@ if (reversed == null) { reversed = false; }
 		            this['pedido' + i].unidades.text = unidades;
 		        }
 		    }
-		
-		
-		// Evento para agregar los datos al hacer clic en el botón "agregar"
-		this.agregar.addEventListener("click", () => {
-		    var numeroPedido = parseInt(this.numerodepedido.text);
-		
-		    // Verificar si el número de pedido está dentro del rango (1 a 6)
-		    if (numeroPedido >= 1 && numeroPedido <= 6) {
-		        // Guardar la información en localStorage con claves dinámicas basadas en el número de pedido
-		        localStorage.setItem('producto' + numeroPedido, this.producto.text);
-		        localStorage.setItem('precio' + numeroPedido, this.precio.text);
-		        localStorage.setItem('nota' + numeroPedido, this.nota.text);
-		        localStorage.setItem('unidades' + numeroPedido, this.unidades.text);
-		        
-		        console.log('Datos guardados para el pedido ' + numeroPedido);
-		    } else {
-		        console.log('Número de pedido fuera de rango');
-		    }
-		});
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Capa_1
+	this.instance = new lib.Símbolo21();
+	this.instance.setTransform(222.6,324.05,1,1,0,0,0,213.6,30.2);
+
+	this.carritolleno = new lib.Símbolo19();
+	this.carritolleno.name = "carritolleno";
+	this.carritolleno.setTransform(309.6,103.05,1,1,0,0,0,71.9,18.8);
+
+	this.pedido10 = new lib.Símbolo16();
+	this.pedido10.name = "pedido10";
+	this.pedido10.setTransform(1053.1,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
+
+	this.pedido9 = new lib.Símbolo16();
+	this.pedido9.name = "pedido9";
+	this.pedido9.setTransform(993.45,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
+
+	this.pedido8 = new lib.Símbolo16();
+	this.pedido8.name = "pedido8";
+	this.pedido8.setTransform(934.6,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
+
+	this.pedido7 = new lib.Símbolo16();
+	this.pedido7.name = "pedido7";
+	this.pedido7.setTransform(874.2,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
+
 	this.pedido6 = new lib.Símbolo16();
 	this.pedido6.name = "pedido6";
-	this.pedido6.setTransform(835.55,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido6.setTransform(808.05,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.pedido5 = new lib.Símbolo16();
 	this.pedido5.name = "pedido5";
-	this.pedido5.setTransform(775.9,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido5.setTransform(748.4,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.pedido4 = new lib.Símbolo16();
 	this.pedido4.name = "pedido4";
-	this.pedido4.setTransform(717.05,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido4.setTransform(689.55,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.pedido3 = new lib.Símbolo16();
 	this.pedido3.name = "pedido3";
-	this.pedido3.setTransform(656.65,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido3.setTransform(629.15,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.numerodepedido = new cjs.Text("", "20px 'Arial'");
 	this.numerodepedido.name = "numerodepedido";
@@ -725,15 +845,15 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(648.75,430.4);
+	this.numerodepedido.setTransform(681.15,419.35);
 
 	this.pedido2 = new lib.Símbolo16();
 	this.pedido2.name = "pedido2";
-	this.pedido2.setTransform(597.7,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido2.setTransform(570.2,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.pedido1 = new lib.Símbolo16();
 	this.pedido1.name = "pedido1";
-	this.pedido1.setTransform(538.15,532.7,0.8526,0.8526,0,0,0,74.2,67.8);
+	this.pedido1.setTransform(510.65,513.9,0.8526,0.8526,0,0,0,74.2,67.8);
 
 	this.nota = new cjs.Text("", "20px 'Arial'");
 	this.nota.name = "nota";
@@ -749,13 +869,13 @@ if (reversed == null) { reversed = false; }
 	this.producto.parent = this;
 	this.producto.setTransform(328.5,-157.25);
 
-	this.instance = new lib.CachedBmp_4();
-	this.instance.setTransform(12.5,267.5,0.5,0.5);
+	this.instance_1 = new lib.CachedBmp_22();
+	this.instance_1.setTransform(12.5,267.5,0.5,0.5);
 
 	this.notaadicional = new lib.an_TextInput({'id': 'notaadicional', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
 
 	this.notaadicional.name = "notaadicional";
-	this.notaadicional.setTransform(13.35,297.35,4.198,2.4503,0,0,0,0.2,0.1);
+	this.notaadicional.setTransform(13.75,297.4,4.198,3.1456,0,0,0,0.3,0.1);
 
 	this.agregar = new lib.Símbolo15();
 	this.agregar.name = "agregar";
@@ -773,25 +893,25 @@ if (reversed == null) { reversed = false; }
 	this.unidadescarrito.parent = this;
 	this.unidadescarrito.setTransform(983.7,24);
 
-	this.instance_1 = new lib.Símbolo13();
-	this.instance_1.setTransform(984.05,43.25,1,1,0,0,0,28.8,28.8);
+	this.instance_2 = new lib.Símbolo13();
+	this.instance_2.setTransform(984.05,43.25,1,1,0,0,0,28.8,28.8);
 
-	this.instance_2 = new lib.Símbolo11();
-	this.instance_2.setTransform(941.9,87.5,0.3107,0.3107,0,0,0,110.5,101.7);
+	this.instance_3 = new lib.Símbolo11();
+	this.instance_3.setTransform(941.9,87.5,0.3107,0.3107,0,0,0,110.5,101.7);
 
-	this.instance_3 = new lib.Símbolo12();
-	this.instance_3.setTransform(945.95,84.8,0.6739,0.6739,0,0,0,85.7,85.8);
+	this.instance_4 = new lib.Símbolo12();
+	this.instance_4.setTransform(945.95,84.8,0.6739,0.6739,0,0,0,85.7,85.8);
 
-	this.instance_4 = new lib.CachedBmp_3();
-	this.instance_4.setTransform(899.35,154.4,0.5,0.5);
+	this.instance_5 = new lib.CachedBmp_21();
+	this.instance_5.setTransform(899.35,154.4,0.5,0.5);
 
 	this.total = new cjs.Text("00", "bold 60px 'Arial'", "#FF0000");
 	this.total.name = "total";
 	this.total.textAlign = "center";
 	this.total.lineHeight = 69;
-	this.total.lineWidth = 208;
+	this.total.lineWidth = 151;
 	this.total.parent = this;
-	this.total.setTransform(944.2,193.9);
+	this.total.setTransform(942.5,198.5);
 
 	this.precio = new cjs.Text("", "20px 'Arial'");
 	this.precio.name = "precio";
@@ -816,16 +936,13 @@ if (reversed == null) { reversed = false; }
 	this.unidades.parent = this;
 	this.unidades.setTransform(99.55,54.5);
 
-	this.instance_5 = new lib.CachedBmp_2();
-	this.instance_5.setTransform(34.75,2.3,0.5,0.5);
+	this.instance_6 = new lib.CachedBmp_20();
+	this.instance_6.setTransform(34.75,2.3,0.5,0.5);
 
-	this.instance_6 = new lib.Símbolo7();
-	this.instance_6.setTransform(99.55,74.8,1,1,0,0,0,34.9,28.7);
+	this.instance_7 = new lib.Símbolo7();
+	this.instance_7.setTransform(99.55,74.8,1,1,0,0,0,34.9,28.7);
 
-	this.instance_7 = new lib.CachedBmp_1();
-	this.instance_7.setTransform(8.5,293.35,0.5,0.5);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.unidades},{t:this.btmas},{t:this.btmenos},{t:this.precio},{t:this.total},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.unidadescarrito},{t:this.pedirya},{t:this.agregar},{t:this.notaadicional},{t:this.instance},{t:this.producto},{t:this.nota},{t:this.pedido1},{t:this.pedido2},{t:this.numerodepedido},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.unidades},{t:this.btmas},{t:this.btmenos},{t:this.precio},{t:this.total},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.unidadescarrito},{t:this.pedirya},{t:this.agregar},{t:this.notaadicional},{t:this.instance_1},{t:this.producto},{t:this.nota},{t:this.pedido1},{t:this.pedido2},{t:this.numerodepedido},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.carritolleno},{t:this.instance}]}).wait(1));
 
 	// Capa_2
 	this.like = new lib.Símbolo17();
@@ -837,7 +954,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(528.3,40.8,521.7,549.8000000000001);
+p.nominalBounds = new cjs.Rectangle(528.3,40.8,513.6000000000001,531);
 // library properties:
 lib.properties = {
 	id: '9F15C8B2AD83954C8BE150CA09864886',
@@ -847,10 +964,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/agregador_atlas_1.png?1743342702920", id:"agregador_atlas_1"},
-		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1743342702966", id:"lib/jquery-3.4.1.min.js"},
-		{src:"components/sdk/anwidget.js?1743342702966", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1743342702966", id:"an.TextInput"}
+		{src:"images/agregador_atlas_1.png?1743438293962", id:"agregador_atlas_1"},
+		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1743438294014", id:"lib/jquery-3.4.1.min.js"},
+		{src:"components/sdk/anwidget.js?1743438294014", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1743438294014", id:"an.TextInput"}
 	],
 	preloads: []
 };
