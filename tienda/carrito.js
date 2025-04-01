@@ -243,7 +243,7 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0,24];
+	this.actionFrames = [0,4];
 	// timeline functions:
 	this.frame_0 = function() {
 		//// Al abrir la página, obtener el número de pedido desde localStorage////
@@ -305,7 +305,7 @@ if (reversed == null) { reversed = false; }
 		    }
 		}
 	}
-	this.frame_24 = function() {
+	this.frame_4 = function() {
 		this.stop();
 		
 		// Limpiar el campo de texto para no acumular contenido previo
@@ -333,15 +333,7 @@ if (reversed == null) { reversed = false; }
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(24).call(this.frame_24).wait(1));
-
-	// Capa_2
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("Aj3AiIjPgEQAHgdA3AGQCcAQEJgaQE3ggBxACQAFAEgHAGQgFAFgIABIilASQjRAYhoAGQhLADhaAAIgqAAg");
-	this.shape.setTransform(155.2337,34.3307);
-	this.shape._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(24).to({_off:false},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(4).call(this.frame_4).wait(1));
 
 	// Capa_4
 	this.miTexto = new cjs.Text("", "33px 'Arial'");
@@ -349,13 +341,13 @@ if (reversed == null) { reversed = false; }
 	this.miTexto.lineHeight = 39;
 	this.miTexto.lineWidth = 748;
 	this.miTexto.parent = this;
-	this.miTexto.setTransform(18.1,73.95);
+	this.miTexto.setTransform(1086.1,73.95);
 
 	this.botonEnviar = new lib.Símbolo10();
 	this.botonEnviar.name = "botonEnviar";
 	this.botonEnviar.setTransform(488.1,92.1,1,1,0,0,0,138.1,41.1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto}]}).wait(25));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto}]}).wait(5));
 
 	// Capa_1
 	this.pedido1 = new lib.Símbolo1();
@@ -434,12 +426,12 @@ if (reversed == null) { reversed = false; }
 	this.pedido2.name = "pedido2";
 	this.pedido2.setTransform(517.2,396.95,1,1,0,0,0,486.4,50.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(25));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(5));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(377.4,864.5,636.4,715.4000000000001);
+p.nominalBounds = new cjs.Rectangle(377.4,864.5,1458.1999999999998,715.4000000000001);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -449,7 +441,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743464217606", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743466458986", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
