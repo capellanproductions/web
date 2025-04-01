@@ -27,42 +27,42 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_26 = function() {
+(lib.CachedBmp_9 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_25 = function() {
+(lib.CachedBmp_8 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_24 = function() {
+(lib.CachedBmp_7 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_22 = function() {
+(lib.CachedBmp_6 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_21 = function() {
+(lib.CachedBmp_5 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_20 = function() {
+(lib.CachedBmp_4 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
@@ -134,7 +134,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_26();
+	this.instance = new lib.CachedBmp_9();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -498,7 +498,7 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.Símbolo11();
 	this.instance.setTransform(212.55,42.2,0.199,0.199,0,0,0,110.8,101.8);
 
-	this.instance_1 = new lib.CachedBmp_25();
+	this.instance_1 = new lib.CachedBmp_8();
 	this.instance_1.setTransform(49.45,20.15,0.5,0.5);
 
 	this.instance_2 = new lib.Símbolo8();
@@ -523,7 +523,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_24();
+	this.instance = new lib.CachedBmp_7();
 	this.instance.setTransform(11.4,19.8,0.5,0.5);
 
 	this.instance_1 = new lib.Símbolo9();
@@ -794,6 +794,15 @@ if (reversed == null) { reversed = false; }
 		            this['pedido' + i].unidades.text = unidades;
 		        }
 		    }
+		
+		
+		//////////////////////ir al carrito/////////////////////
+		
+		this.iralcarrito.addEventListener("click", fl_Click1);
+		
+		function fl_Click1() {
+		    window.open("../../micarrito.html", "_top");
+		}
 	}
 
 	// actions tween:
@@ -869,7 +878,7 @@ if (reversed == null) { reversed = false; }
 	this.producto.parent = this;
 	this.producto.setTransform(328.5,-157.25);
 
-	this.instance_1 = new lib.CachedBmp_22();
+	this.instance_1 = new lib.CachedBmp_6();
 	this.instance_1.setTransform(12.5,267.5,0.5,0.5);
 
 	this.notaadicional = new lib.an_TextInput({'id': 'notaadicional', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
@@ -881,9 +890,9 @@ if (reversed == null) { reversed = false; }
 	this.agregar.name = "agregar";
 	this.agregar.setTransform(351.9,169.15,1,1,0,0,0,138.1,41.1);
 
-	this.pedirya = new lib.Símbolo14();
-	this.pedirya.name = "pedirya";
-	this.pedirya.setTransform(655.3,169.15,1,1,0,0,0,138.1,41.1);
+	this.iralcarrito = new lib.Símbolo14();
+	this.iralcarrito.name = "iralcarrito";
+	this.iralcarrito.setTransform(655.3,169.15,1,1,0,0,0,138.1,41.1);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -902,7 +911,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_4 = new lib.Símbolo12();
 	this.instance_4.setTransform(945.95,84.8,0.6739,0.6739,0,0,0,85.7,85.8);
 
-	this.instance_5 = new lib.CachedBmp_21();
+	this.instance_5 = new lib.CachedBmp_5();
 	this.instance_5.setTransform(899.35,154.4,0.5,0.5);
 
 	this.total = new cjs.Text("00", "bold 60px 'Arial'", "#FF0000");
@@ -936,13 +945,13 @@ if (reversed == null) { reversed = false; }
 	this.unidades.parent = this;
 	this.unidades.setTransform(99.55,54.5);
 
-	this.instance_6 = new lib.CachedBmp_20();
+	this.instance_6 = new lib.CachedBmp_4();
 	this.instance_6.setTransform(34.75,2.3,0.5,0.5);
 
 	this.instance_7 = new lib.Símbolo7();
 	this.instance_7.setTransform(99.55,74.8,1,1,0,0,0,34.9,28.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.unidades},{t:this.btmas},{t:this.btmenos},{t:this.precio},{t:this.total},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.unidadescarrito},{t:this.pedirya},{t:this.agregar},{t:this.notaadicional},{t:this.instance_1},{t:this.producto},{t:this.nota},{t:this.pedido1},{t:this.pedido2},{t:this.numerodepedido},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.carritolleno},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.unidades},{t:this.btmas},{t:this.btmenos},{t:this.precio},{t:this.total},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.unidadescarrito},{t:this.iralcarrito},{t:this.agregar},{t:this.notaadicional},{t:this.instance_1},{t:this.producto},{t:this.nota},{t:this.pedido1},{t:this.pedido2},{t:this.numerodepedido},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.carritolleno},{t:this.instance}]}).wait(1));
 
 	// Capa_2
 	this.like = new lib.Símbolo17();
@@ -964,10 +973,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/agregador_atlas_1.png?1743438792411", id:"agregador_atlas_1"},
-		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1743438792464", id:"lib/jquery-3.4.1.min.js"},
-		{src:"components/sdk/anwidget.js?1743438792464", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1743438792464", id:"an.TextInput"}
+		{src:"images/agregador_atlas_1.png?1743466214298", id:"agregador_atlas_1"},
+		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1743466214340", id:"lib/jquery-3.4.1.min.js"},
+		{src:"components/sdk/anwidget.js?1743466214340", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1743466214340", id:"an.TextInput"}
 	],
 	preloads: []
 };
