@@ -318,11 +318,26 @@ if (reversed == null) { reversed = false; }
 		    var precio = this["pedido" + i].precio.text;
 		    var unidades = this["pedido" + i].unidades.text;
 		    var nota = this["pedido" + i].nota.text;
+		
+		    // Verificar si los campos tienen texto antes de agregarlos
+		    if (producto && precio && unidades) {
+		        // Solo agregar el contenido si no está vacío
+		        this.miTexto.text += unidades + " de " + producto + " " + precio + "\n";
+		    }
 		    
-		    // Concatenar los valores con el formato deseado
-		    this.miTexto.text += unidades + " de " + producto + " " + precio + "\n" + "Nota Adicional: " + nota + "\n" + "-----------------------------\n";
+		    if (nota) {
+		        // Agregar nota adicional solo si tiene texto
+		        this.miTexto.text += "Nota Adicional: " + nota + "\n";
+		    }
+		
+		    // Añadir los guiones solo si al menos se añadió alguna información
+		    if (producto || precio || unidades || nota) {
+		        this.miTexto.text += "-----------------------------\n";
+		    }
 		}
 		
+		
+		/////////////////envia a wasap////////////
 		this.botonEnviar.addEventListener("click", function() {
 		    var numero = "18496532129"; // Reemplaza con tu número de WhatsApp
 		    var mensaje = encodeURIComponent(this.miTexto.text); // Obtiene el texto del campo
@@ -441,7 +456,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743466458986", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743467485018", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
