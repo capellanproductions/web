@@ -9,31 +9,31 @@
       padding: 0;
       width: 1050px;
       height: 1500px;
-      overflow: hidden;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
 
-    .container {
-      display: flex;
-      align-items: flex-start;
+    .contenido {
       padding: 20px;
+      width: 1010px; /* 1050 - 2*20 de padding */
+      height: 1460px; /* 1500 - 2*20 */
+      box-sizing: border-box;
     }
 
     .imagen {
+      float: left;
+      margin-right: 20px;
       width: 520px;
       height: 1000px;
     }
 
     .texto {
-      width: 500px;
-      height: 1000px;
-      padding-left: 20px;
-      overflow-y: auto;
+      overflow: hidden;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="contenido">
     <img class="imagen" src="nosotros/nosotros.png" alt="Nosotros">
     <div class="texto" id="texto"></div>
   </div>
