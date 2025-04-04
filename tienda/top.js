@@ -27,35 +27,35 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_15 = function() {
+(lib.CachedBmp_5 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_14 = function() {
+(lib.CachedBmp_4 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_13 = function() {
+(lib.CachedBmp_3 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_12 = function() {
+(lib.CachedBmp_2 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_11 = function() {
+(lib.CachedBmp_1 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
@@ -305,7 +305,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_15();
+	this.instance = new lib.CachedBmp_5();
 	this.instance.setTransform(0,-144.8,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -662,10 +662,10 @@ if (reversed == null) { reversed = false; }
 	this.btinicio.name = "btinicio";
 	this.btinicio.setTransform(123.85,34.45,0.7134,1,0,0,0,93,33.5);
 
-	this.instance = new lib.CachedBmp_14();
+	this.instance = new lib.CachedBmp_4();
 	this.instance.setTransform(13.65,11.4,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_13();
+	this.instance_1 = new lib.CachedBmp_3();
 	this.instance_1.setTransform(425.65,11.4,0.5,0.5);
 
 	this.instance_2 = new lib.Símbolo2();
@@ -674,7 +674,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_3 = new lib.Símbolo2();
 	this.instance_3.setTransform(197.3,34,1,1,0,0,0,1.9,34);
 
-	this.instance_4 = new lib.CachedBmp_12();
+	this.instance_4 = new lib.CachedBmp_2();
 	this.instance_4.setTransform(203.65,11.4,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.btinicio},{t:this.btnosotros},{t:this.btcontactos}]}).wait(1));
@@ -1025,7 +1025,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_4 = new lib.Símbolo12();
 	this.instance_4.setTransform(979.2,73.8,0.6739,0.6739,0,0,0,85.7,85.8);
 
-	this.instance_5 = new lib.CachedBmp_11();
+	this.instance_5 = new lib.CachedBmp_1();
 	this.instance_5.setTransform(818.95,4,0.5,0.5);
 
 	this.total = new cjs.Text("00", "bold 60px 'Arial'", "#FF0000");
@@ -1062,7 +1062,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/top_atlas_1.png?1743783018303", id:"top_atlas_1"}
+		{src:"images/top_atlas_1.png?1743784609862", id:"top_atlas_1"}
 	],
 	preloads: []
 };
