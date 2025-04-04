@@ -101,29 +101,6 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.Símbolo27, new cjs.Rectangle(0,0,186,67), null);
 
 
-(lib.Símbolo17 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#666666").s().p("EhSBAu4MAAAhdvMCkDAAAMAAABdvg");
-	this.shape.setTransform(-525,300);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo17, new cjs.Rectangle(-1050,0,1050,600), null);
-
-
 (lib.Símbolo13 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -307,29 +284,6 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.Símbolo19, new cjs.Rectangle(0,0,186,67), null);
 
 
-(lib.Símbolo8 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.banners = new lib.Símbolo17();
-	this.banners.name = "banners";
-	this.banners.setTransform(525,300,1,1,0,0,0,-525,300);
-
-	this.timeline.addTween(cjs.Tween.get(this.banners).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo8, new cjs.Rectangle(0,0,1050,600), null);
-
-
 (lib.Símbolo6 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -445,22 +399,19 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0,1,2,3];
+	this.actionFrames = [0];
+	this.isSingleFrame = false;
 	// timeline functions:
 	this.frame_0 = function() {
+		if(this.isSingleFrame) {
+			return;
+		}
+		if(this.totalFrames == 1) {
+			this.isSingleFrame = true;
+		}
 		//// Al abrir la página, obtener el número de pedido desde localStorage////
 		var numeroPedidoGuardado = localStorage.getItem('datos1');
 		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
-		
-		function leerDatosLocalStorage() {
-		var numeroPedidoGuardado = localStorage.getItem('datos1');
-		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
-		
-		}
-		
-		// Ejecutar la función cada 3 segundos
-		setInterval(leerDatosLocalStorage, 3000);
-		
 		
 		
 		/////////////////////////////////////////////////////
@@ -520,88 +471,10 @@ if (reversed == null) { reversed = false; }
 		    // Ajustar la posición dentro del MovieClip "logo"
 		    this.logo.logo.addChild(imagen);
 		}.bind(this);
-		this.stop();
-		// Cargar la imagen en 'this.banners'
-		var image = new createjs.Bitmap("banners/top1.jpg");
-		image.alpha = 0; // Inicializa la imagen con alpha 0
-		image.scaleX = 1; // Inicializa el escalado en 100%
-		image.scaleY = 1; // Inicializa el escalado en 100%
-		this.banners.addChild(image); // Agrega la imagen a 'this.banners'
-		
-		// Animar el alpha de 0 a 1 en 1 segundo
-		createjs.Tween.get(image)
-		    .to({ alpha: 1 }, 1000)  // Alpha de 0 a 1 en 1000ms (1 segundo)
-		
-		createjs.Tween.get(image)
-		    .to({ scaleX: 1.15, scaleY: 1.15 }, 5000) // Escalado de 100% a 115% en 5000ms (5 segundos)
-		    .call(function() {
-		        // Llamar a 'this.play()' cuando la animación de escalado termine
-		        this.play();
-		    }.bind(this)); // Usamos '.bind(this)' para asegurar que 'this' se mantenga dentro del contexto correcto
-	}
-	this.frame_1 = function() {
-		this.stop();
-		// Cargar la imagen en 'this.banners'
-		var image = new createjs.Bitmap("banners/top2.jpg");
-		image.alpha = 0; // Inicializa la imagen con alpha 0
-		image.scaleX = 1; // Inicializa el escalado en 100%
-		image.scaleY = 1; // Inicializa el escalado en 100%
-		this.banners.addChild(image); // Agrega la imagen a 'this.banners'
-		
-		// Animar el alpha de 0 a 1 en 1 segundo
-		createjs.Tween.get(image)
-		    .to({ alpha: 1 }, 1000)  // Alpha de 0 a 1 en 1000ms (1 segundo)
-		
-		createjs.Tween.get(image)
-		    .to({ scaleX: 1.15, scaleY: 1.15 }, 5000) // Escalado de 100% a 115% en 5000ms (5 segundos)
-		    .call(function() {
-		        // Llamar a 'this.play()' cuando la animación de escalado termine
-		        this.play();
-		    }.bind(this)); // Usamos '.bind(this)' para asegurar que 'this' se mantenga dentro del contexto correcto
-	}
-	this.frame_2 = function() {
-		this.stop();
-		// Cargar la imagen en 'this.banners'
-		var image = new createjs.Bitmap("banners/top3.jpg");
-		image.alpha = 0; // Inicializa la imagen con alpha 0
-		image.scaleX = 1; // Inicializa el escalado en 100%
-		image.scaleY = 1; // Inicializa el escalado en 100%
-		this.banners.addChild(image); // Agrega la imagen a 'this.banners'
-		
-		// Animar el alpha de 0 a 1 en 1 segundo
-		createjs.Tween.get(image)
-		    .to({ alpha: 1 }, 1000)  // Alpha de 0 a 1 en 1000ms (1 segundo)
-		
-		createjs.Tween.get(image)
-		    .to({ scaleX: 1.15, scaleY: 1.15 }, 5000) // Escalado de 100% a 115% en 5000ms (5 segundos)
-		    .call(function() {
-		        // Llamar a 'this.play()' cuando la animación de escalado termine
-		        this.play();
-		    }.bind(this)); // Usamos '.bind(this)' para asegurar que 'this' se mantenga dentro del contexto correcto
-	}
-	this.frame_3 = function() {
-		this.stop();
-		// Cargar la imagen en 'this.banners'
-		var image = new createjs.Bitmap("banners/top4.jpg");
-		image.alpha = 0; // Inicializa la imagen con alpha 0
-		image.scaleX = 1; // Inicializa el escalado en 100%
-		image.scaleY = 1; // Inicializa el escalado en 100%
-		this.banners.addChild(image); // Agrega la imagen a 'this.banners'
-		
-		// Animar el alpha de 0 a 1 en 1 segundo
-		createjs.Tween.get(image)
-		    .to({ alpha: 1 }, 1000)  // Alpha de 0 a 1 en 1000ms (1 segundo)
-		
-		createjs.Tween.get(image)
-		    .to({ scaleX: 1.15, scaleY: 1.15 }, 5000) // Escalado de 100% a 115% en 5000ms (5 segundos)
-		    .call(function() {
-		        // Llamar a 'this.play()' cuando la animación de escalado termine
-		        this.play();
-		    }.bind(this)); // Usamos '.bind(this)' para asegurar que 'this' se mantenga dentro del contexto correcto
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1).call(this.frame_3).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Capa_1
 	this.instance = new lib.Símbolo4();
@@ -656,19 +529,12 @@ if (reversed == null) { reversed = false; }
 	this.instance_5.setTransform(525,190.6,1,1,0,0,0,525,49.4);
 	this.instance_5.alpha = 0.5195;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.total},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.unidadescarrito},{t:this.iralcarrito},{t:this.numerodepedido},{t:this.logo},{t:this.instance}]}).wait(4));
-
-	// Capa_3
-	this.banners = new lib.Símbolo8();
-	this.banners.name = "banners";
-	this.banners.setTransform(525,110,1,1,0,0,0,525,300);
-
-	this.timeline.addTween(cjs.Tween.get(this.banners).wait(4));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.total},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.unidadescarrito},{t:this.iralcarrito},{t:this.numerodepedido},{t:this.logo},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(489.8,-70,562.3,480);
+p.nominalBounds = new cjs.Rectangle(489.8,83,562.3,157);
 // library properties:
 lib.properties = {
 	id: 'E0636BAF6767B64590683251747ECF5E',
@@ -678,7 +544,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/topmini_atlas_1.png?1743781569253", id:"topmini_atlas_1"}
+		{src:"images/topmini_atlas_1.png?1743783465601", id:"topmini_atlas_1"}
 	],
 	preloads: []
 };
