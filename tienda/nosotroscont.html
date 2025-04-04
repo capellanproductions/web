@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nosotros</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1050px;
+      height: 1500px;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .imagen {
+      width: 520px;
+      height: 1000px;
+    }
+
+    .texto {
+      width: 500px;
+      height: 1000px;
+      padding-left: 20px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="imagen" src="nosotros/nosotros.png" alt="Nosotros">
+    <div class="texto" id="texto"></div>
+  </div>
+
+  <script>
+    // Cargar el texto desde el archivo nosotros.txt
+    fetch("nosotros/nosotros.txt")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("texto").textContent = data;
+      })
+      .catch(error => {
+        document.getElementById("texto").textContent = "Error al cargar el texto.";
+        console.error("Error al cargar el texto:", error);
+      });
+  </script>
+</body>
+</html>
