@@ -16,11 +16,11 @@
     .contenido {
       padding: 20px;
       width: 1010px; /* 1050 - 2*20 de padding */
-      height: 1460px; /* 1500 - 2*20 */
+      height: 1460px;
       box-sizing: border-box;
     }
 
-    .imagen {
+    img.imagen {
       float: left;
       margin-right: 20px;
       width: 520px;
@@ -28,14 +28,16 @@
     }
 
     .texto {
-      overflow: hidden;
+      text-align: justify;
     }
   </style>
 </head>
 <body>
   <div class="contenido">
-    <img class="imagen" src="nosotros/nosotros.png" alt="Nosotros">
-    <div class="texto" id="texto"></div>
+    <img class="imagen" src="nosotros/nosotros.png" alt="Imagen Nosotros">
+    <div class="texto" id="texto">
+      <!-- Aquí se insertará el texto dinámicamente -->
+    </div>
   </div>
 
   <script>
