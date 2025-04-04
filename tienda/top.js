@@ -727,7 +727,7 @@ if (reversed == null) { reversed = false; }
 		this.bt.addEventListener("click", fl_ClickToGoToWebPage);
 		
 		function fl_ClickToGoToWebPage() {
-			window.open("https://www.youtube.com/@PayaminySuPatioMagico", "_blank");
+			window.open("https://www.youtube.com/channel/UCINZoUWKqC9XRsZXYsy5JjQ", "_blank");
 		}
 	}
 
@@ -1062,7 +1062,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/top_atlas_1.png?1743782600645", id:"top_atlas_1"}
+		{src:"images/top_atlas_1.png?1743783018303", id:"top_atlas_1"}
 	],
 	preloads: []
 };
