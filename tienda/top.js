@@ -840,14 +840,6 @@ if (reversed == null) { reversed = false; }
 		var numeroPedidoGuardado = localStorage.getItem('datos1');
 		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
 		
-		function leerDatosLocalStorage() {
-		var numeroPedidoGuardado = localStorage.getItem('datos1');
-		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
-		
-		}
-		
-		// Ejecutar la función cada 3 segundos
-		setInterval(leerDatosLocalStorage, 3000);
 		
 		
 		
@@ -1070,7 +1062,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/top_atlas_1.png?1743781525867", id:"top_atlas_1"}
+		{src:"images/top_atlas_1.png?1743782600645", id:"top_atlas_1"}
 	],
 	preloads: []
 };
