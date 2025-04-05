@@ -1052,17 +1052,17 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(489.8,83,752,517);
+p.nominalBounds = new cjs.Rectangle(489.8,113,752,487);
 // library properties:
 lib.properties = {
 	id: 'E0636BAF6767B64590683251747ECF5E',
 	width: 1050,
-	height: 240,
+	height: 300,
 	fps: 60,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/top_atlas_1.png?1743853735764", id:"top_atlas_1"}
+		{src:"images/top_atlas_1.png?1743853913741", id:"top_atlas_1"}
 	],
 	preloads: []
 };
