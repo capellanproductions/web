@@ -476,8 +476,6 @@ if (reversed == null) { reversed = false; }
 		
 		
 		////////////alpha 0 a unidad y eliminar/////////////////
-		
-		
 		for (let i = 0; i <= 11; i++) {
 		    let pedido = this['pedido' + i];
 		
@@ -578,7 +576,11 @@ if (reversed == null) { reversed = false; }
 	this.botonEnviar.name = "botonEnviar";
 	this.botonEnviar.setTransform(527.35,170.4,1,1,0,0,0,138.1,41.1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(5));
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#000000").s().p("AmUAVQgogDgRgQQgLgJABgRQAAgSAOgFIAEAnQHKAzHTgMQABAGgHAEQgGADgIABQh3ADh2AAQk5AAkygbg");
+	this.shape.setTransform(151.2092,140.1484);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(5));
 
 	// Capa_1
 	this.pedido1 = new lib.Símbolo1();
@@ -672,7 +674,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743867850941", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743868437326", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
