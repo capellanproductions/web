@@ -605,7 +605,7 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_1
 	this.instance = new lib.Símbolo4();
-	this.instance.setTransform(273.2,198.65,1,1,0,0,0,322.1,34);
+	this.instance.setTransform(273.2,218.65,1,1,0,0,0,322.1,34);
 
 	this.logo = new lib.Símbolo6();
 	this.logo.name = "logo";
@@ -621,7 +621,7 @@ if (reversed == null) { reversed = false; }
 
 	this.iralcarrito = new lib.Símbolo1();
 	this.iralcarrito.name = "iralcarrito";
-	this.iralcarrito.setTransform(792.1,-215.75,1.3302,0.784,0,0,0,0.1,0.1);
+	this.iralcarrito.setTransform(792.3,2.1,1.3302,0.784,0,0,0,0.1,0.1);
 	this.iralcarrito.alpha = 0.0117;
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
@@ -653,7 +653,7 @@ if (reversed == null) { reversed = false; }
 	this.total.setTransform(915.95,47.45);
 
 	this.instance_5 = new lib.Símbolo3();
-	this.instance_5.setTransform(525,190.6,1,1,0,0,0,525,49.4);
+	this.instance_5.setTransform(525,210.6,1,1,0,0,0,525,49.4);
 	this.instance_5.alpha = 0.5195;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.total},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.unidadescarrito},{t:this.iralcarrito},{t:this.numerodepedido},{t:this.logo},{t:this.instance}]}).wait(4));
@@ -668,17 +668,17 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(489.8,-95.8,562.3,505.8);
+p.nominalBounds = new cjs.Rectangle(489.8,-60,562.3,470);
 // library properties:
 lib.properties = {
 	id: 'E0636BAF6767B64590683251747ECF5E',
 	width: 1050,
-	height: 240,
+	height: 260,
 	fps: 60,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/topmini_atlas_1.png?1743853025481", id:"topmini_atlas_1"}
+		{src:"images/topmini_atlas_1.png?1743854463850", id:"topmini_atlas_1"}
 	],
 	preloads: []
 };
