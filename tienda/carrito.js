@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"carrito_atlas_1", frames: [[0,167,504,82],[0,251,504,82],[0,0,552,165],[554,0,98,51],[506,167,210,75]]}
+		{name:"carrito_atlas_1", frames: [[554,0,98,51],[0,167,504,82],[0,251,504,82],[0,0,552,165],[506,167,210,75]]}
 ];
 
 
@@ -27,28 +27,28 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_31 = function() {
+(lib.CachedBmp_32 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_29 = function() {
+(lib.CachedBmp_31 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_30 = function() {
+(lib.CachedBmp_29 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_28 = function() {
+(lib.CachedBmp_30 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
@@ -76,6 +76,28 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
+
+
+(lib.Símbolo21 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.instance = new lib.CachedBmp_32();
+	this.instance.setTransform(0,0,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo21, new cjs.Rectangle(0,0,49,25.5), null);
 
 
 (lib.Símbolo20 = function(mode,startPosition,loop,reversed) {
@@ -306,9 +328,39 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
+	this.isSingleFrame = false;
+	// timeline functions:
+	this.frame_0 = function() {
+		if(this.isSingleFrame) {
+			return;
+		}
+		if(this.totalFrames == 1) {
+			this.isSingleFrame = true;
+		}
+		// Suponiendo que el botón de eliminar es 'this.eliminar' y pertenece a un pedido específico
+		this.eliminar.addEventListener('click', function() {
+		    // Vaciar los campos de texto correspondientes
+		    this.producto.text = "";
+		    this.nota.text = "";
+		    this.precio.text = "";
+		    this.unidades.text = "";
+		
+		    // Reproducir la animación o el comportamiento correspondiente
+		    exportroot.play();
+		});
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+
 	// Capa_1
-	this.instance = new lib.Símbolo19();
-	this.instance.setTransform(898.65,70.3,1,1,44.9994,0,0,32.4,32.3);
+	this.unidad = new lib.Símbolo21();
+	this.unidad.name = "unidad";
+	this.unidad.setTransform(24.5,43.95,1,1,0,0,0,24.5,12.6);
+
+	this.eliminar = new lib.Símbolo19();
+	this.eliminar.name = "eliminar";
+	this.eliminar.setTransform(975.7,47.6,1,1,44.9994,0,0,32.4,32.3);
 
 	this.nota = new cjs.Text("", "19px 'Arial'", "#666666");
 	this.nota.name = "nota";
@@ -316,9 +368,6 @@ if (reversed == null) { reversed = false; }
 	this.nota.lineWidth = 733;
 	this.nota.parent = this;
 	this.nota.setTransform(97.25,2);
-
-	this.instance_1 = new lib.CachedBmp_28();
-	this.instance_1.setTransform(0,31.35,0.5,0.5);
 
 	this.unidades = new cjs.Text("", "30px 'Arial'", "#0066FF");
 	this.unidades.name = "unidades";
@@ -330,9 +379,9 @@ if (reversed == null) { reversed = false; }
 	this.precio = new cjs.Text("", "30px 'Arial'", "#FF0000");
 	this.precio.name = "precio";
 	this.precio.lineHeight = 36;
-	this.precio.lineWidth = 104;
+	this.precio.lineWidth = 96;
 	this.precio.parent = this;
-	this.precio.setTransform(844.35,0.85);
+	this.precio.setTransform(844.35,31.25);
 
 	this.producto = new cjs.Text("", "30px 'Arial'");
 	this.producto.name = "producto";
@@ -341,11 +390,11 @@ if (reversed == null) { reversed = false; }
 	this.producto.parent = this;
 	this.producto.setTransform(96.65,30.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.producto},{t:this.precio},{t:this.unidades},{t:this.instance_1},{t:this.nota},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.producto},{t:this.precio},{t:this.unidades},{t:this.nota},{t:this.eliminar},{t:this.unidad}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,-1.1,950.4,119.1), null);
+}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,0,1023.7,101.4), null);
 
 
 // stage content:
@@ -419,6 +468,25 @@ if (reversed == null) { reversed = false; }
 		         // Restablecer número de pedido
 		    } else {
 		        this.numerodepedido.text = numeroPedidoGuardado;  // Asignar el valor guardado
+		    }
+		}
+		
+		
+		
+		///////////////////////alpha de eliminar y unidad//////////////////////////
+		
+		for (let i = 0; i <= 11; i++) {
+		    let pedido = this['pedido' + i];
+		
+		    if (pedido) {
+		        // Verificar si el campo producto está vacío
+		        if (!pedido.producto.text || pedido.producto.text.trim() === "") {
+		            pedido.unidad.alpha = 0;
+		            pedido.eliminar.alpha = 0;
+		        } else {
+		            pedido.unidad.alpha = 1;
+		            pedido.eliminar.alpha = 1;
+		        }
 		    }
 		}
 		this.vaciar.on("click", function() {
@@ -520,7 +588,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(27.55,9.35);
+	this.numerodepedido.setTransform(-7.25,-50.75);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -591,7 +659,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(532.9,857.4,1302.6999999999998,820.0000000000001);
+p.nominalBounds = new cjs.Rectangle(498.1,797.3,1337.5,863.5);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -601,7 +669,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743863785858", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743866614401", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
