@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"carrito_atlas_1", frames: [[0,0,504,82],[212,84,98,51],[0,84,210,75]]}
+		{name:"carrito_atlas_1", frames: [[0,167,504,82],[0,251,504,82],[0,0,552,165],[554,0,98,51],[506,167,210,75]]}
 ];
 
 
@@ -27,23 +27,37 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_3 = function() {
+(lib.CachedBmp_31 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_2 = function() {
+(lib.CachedBmp_29 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_1 = function() {
+(lib.CachedBmp_30 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_28 = function() {
+	this.initialize(ss["carrito_atlas_1"]);
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_27 = function() {
+	this.initialize(ss["carrito_atlas_1"]);
+	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -62,6 +76,52 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
+
+
+(lib.Símbolo20 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#CCCCCC").s().p("AlQFRIAAqhIKhAAIAAKhg");
+	this.shape.setTransform(33.7,33.7);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo20, new cjs.Rectangle(0,0,67.4,67.4), null);
+
+
+(lib.Símbolo16 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FF0000").s().p("AAAFDQgdAAgUgUQgVgVAAgdIAAn5QAAgdAVgVQAUgUAdAAIAAAAQAeAAAUAUQAVAVAAAdIAAH5QAAAdgVAVQgUAUgeAAg");
+	this.shape.setTransform(7.075,32.325);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo16, new cjs.Rectangle(0,0,14.2,64.7), null);
 
 
 (lib.Símbolo13 = function(mode,startPosition,loop,reversed) {
@@ -133,6 +193,31 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.Símbolo11, new cjs.Rectangle(0,0,221.2,203), null);
 
 
+(lib.Símbolo10 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.instance = new lib.CachedBmp_29();
+	this.instance.setTransform(12.05,20.75,0.5,0.5);
+
+	this.instance_1 = new lib.CachedBmp_30();
+	this.instance_1.setTransform(0,0,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo10, new cjs.Rectangle(0,0,276,82.5), null);
+
+
 (lib.Símbolo9 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -156,6 +241,60 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.Símbolo9, new cjs.Rectangle(0,0,276.1,82.4), null);
 
 
+(lib.Símbolo19 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.instance = new lib.Símbolo20();
+	this.instance.setTransform(32.7,32.1,1,1,0,0,0,33.7,33.7);
+	this.instance.alpha = 0.0117;
+
+	this.instance_1 = new lib.Símbolo16();
+	this.instance_1.setTransform(32.3,32.35,1,1,-90,0,0,7,32.3);
+
+	this.instance_2 = new lib.Símbolo16();
+	this.instance_2.setTransform(32.25,32.3,1,1,0,0,0,7,32.3);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo19, new cjs.Rectangle(-1,-1.6,67.4,67.39999999999999), null);
+
+
+(lib.Símbolo10copia = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.instance = new lib.CachedBmp_31();
+	this.instance.setTransform(12.05,20.75,0.5,0.5);
+
+	this.instance_1 = new lib.Símbolo9();
+	this.instance_1.setTransform(138.1,41.1,1,1,0,0,0,138.1,41.1);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo10copia, new cjs.Rectangle(0,0,276.1,82.4), null);
+
+
 (lib.Símbolo1 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -168,6 +307,9 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
+	this.instance = new lib.Símbolo19();
+	this.instance.setTransform(898.65,70.3,1,1,44.9994,0,0,32.4,32.3);
+
 	this.nota = new cjs.Text("", "19px 'Arial'", "#666666");
 	this.nota.name = "nota";
 	this.nota.lineHeight = 23;
@@ -175,8 +317,8 @@ if (reversed == null) { reversed = false; }
 	this.nota.parent = this;
 	this.nota.setTransform(97.25,2);
 
-	this.instance = new lib.CachedBmp_2();
-	this.instance.setTransform(0,31.35,0.5,0.5);
+	this.instance_1 = new lib.CachedBmp_28();
+	this.instance_1.setTransform(0,31.35,0.5,0.5);
 
 	this.unidades = new cjs.Text("", "30px 'Arial'", "#0066FF");
 	this.unidades.name = "unidades";
@@ -190,7 +332,7 @@ if (reversed == null) { reversed = false; }
 	this.precio.lineHeight = 36;
 	this.precio.lineWidth = 104;
 	this.precio.parent = this;
-	this.precio.setTransform(866.9,30.4);
+	this.precio.setTransform(844.35,0.85);
 
 	this.producto = new cjs.Text("", "30px 'Arial'");
 	this.producto.name = "producto";
@@ -199,36 +341,11 @@ if (reversed == null) { reversed = false; }
 	this.producto.parent = this;
 	this.producto.setTransform(96.65,30.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.producto},{t:this.precio},{t:this.unidades},{t:this.instance},{t:this.nota}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.producto},{t:this.precio},{t:this.unidades},{t:this.instance_1},{t:this.nota},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,0,972.9,101.4), null);
-
-
-(lib.Símbolo10 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.instance = new lib.CachedBmp_3();
-	this.instance.setTransform(12.05,20.75,0.5,0.5);
-
-	this.instance_1 = new lib.Símbolo9();
-	this.instance_1.setTransform(138.1,41.1,1,1,0,0,0,138.1,41.1);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo10, new cjs.Rectangle(0,0,276.1,82.4), null);
+}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,-1.1,950.4,119.1), null);
 
 
 // stage content:
@@ -290,7 +407,7 @@ if (reversed == null) { reversed = false; }
 		} else {
 		    // Calcular el tiempo transcurrido
 		    var tiempoTranscurrido = Date.now() - parseInt(tiempoGuardado);
-		    if (tiempoTranscurrido > 60000) { // Si han pasado más de 1 minuto (60000 ms)
+		    if (tiempoTranscurrido > 900000) { // Si han pasado más de 15 minutos (900000 ms)
 				this.numerodepedido.text = "1"; 
 				this.total.text = "0"; 
 				this.unidadescarrito.text = "0"; 
@@ -304,6 +421,30 @@ if (reversed == null) { reversed = false; }
 		        this.numerodepedido.text = numeroPedidoGuardado;  // Asignar el valor guardado
 		    }
 		}
+		this.vaciar.on("click", function() {
+		  // 🔹 Borrar todo del localStorage
+		  localStorage.clear();
+		
+		  // 🔹 Reiniciar número de pedido, total y unidades
+		  this.numerodepedido.text = "1";
+		  this.total.text = "$0";
+		  this.unidadescarrito.text = "0";
+		
+		  // 🔹 Limpiar todos los campos de pedido
+		  for (let i = 0; i <= 11; i++) {
+		    let pedido = this['pedido' + (i - 1)];
+		
+		    if (pedido) {
+		      pedido.producto.text = "";
+		      pedido.precio.text = "";
+		      pedido.nota.text = "";
+		      pedido.unidades.text = "";
+		    }
+		  }
+		
+		this.play();
+		
+		}.bind(this));
 	}
 	this.frame_4 = function() {
 		this.stop();
@@ -351,6 +492,10 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(4).call(this.frame_4).wait(1));
 
 	// Capa_4
+	this.vaciar = new lib.Símbolo10copia();
+	this.vaciar.name = "vaciar";
+	this.vaciar.setTransform(942.15,177.55,0.6505,0.6505,0,0,0,138.2,41.1);
+
 	this.miTexto = new cjs.Text("", "33px 'Arial'");
 	this.miTexto.name = "miTexto";
 	this.miTexto.lineHeight = 39;
@@ -360,14 +505,14 @@ if (reversed == null) { reversed = false; }
 
 	this.botonEnviar = new lib.Símbolo10();
 	this.botonEnviar.name = "botonEnviar";
-	this.botonEnviar.setTransform(488.1,92.1,1,1,0,0,0,138.1,41.1);
+	this.botonEnviar.setTransform(527.35,170.4,1,1,0,0,0,138.1,41.1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto}]}).wait(5));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(5));
 
 	// Capa_1
 	this.pedido1 = new lib.Símbolo1();
 	this.pedido1.name = "pedido1";
-	this.pedido1.setTransform(517.2,246.4,1,1,0,0,0,486.4,50.7);
+	this.pedido1.setTransform(517.2,327.25,1,1,0,0,0,486.4,50.7);
 
 	this.numerodepedido = new cjs.Text("", "20px 'Arial'");
 	this.numerodepedido.name = "numerodepedido";
@@ -375,7 +520,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(-127.95,73.95);
+	this.numerodepedido.setTransform(27.55,9.35);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -394,8 +539,8 @@ if (reversed == null) { reversed = false; }
 	this.instance_2 = new lib.Símbolo12();
 	this.instance_2.setTransform(945.95,84.8,0.6739,0.6739,0,0,0,85.7,85.8);
 
-	this.instance_3 = new lib.CachedBmp_1();
-	this.instance_3.setTransform(726.25,20.8,0.5,0.5);
+	this.instance_3 = new lib.CachedBmp_27();
+	this.instance_3.setTransform(480.05,20.8,0.5,0.5);
 
 	this.total = new cjs.Text("00", "bold 60px 'Arial'", "#FF0000");
 	this.total.name = "total";
@@ -403,50 +548,50 @@ if (reversed == null) { reversed = false; }
 	this.total.lineHeight = 69;
 	this.total.lineWidth = 208;
 	this.total.parent = this;
-	this.total.setTransform(771.1,60.3);
+	this.total.setTransform(524.9,60.3);
 
 	this.pedido10 = new lib.Símbolo1();
 	this.pedido10.name = "pedido10";
-	this.pedido10.setTransform(517.2,1529.2,1,1,0,0,0,486.4,50.7);
+	this.pedido10.setTransform(517.2,1610.05,1,1,0,0,0,486.4,50.7);
 
 	this.pedido9 = new lib.Símbolo1();
 	this.pedido9.name = "pedido9";
-	this.pedido9.setTransform(517.2,1387.7,1,1,0,0,0,486.4,50.7);
+	this.pedido9.setTransform(517.2,1468.55,1,1,0,0,0,486.4,50.7);
 
 	this.pedido8 = new lib.Símbolo1();
 	this.pedido8.name = "pedido8";
-	this.pedido8.setTransform(517.2,1244.15,1,1,0,0,0,486.4,50.7);
+	this.pedido8.setTransform(517.2,1325,1,1,0,0,0,486.4,50.7);
 
 	this.pedido7 = new lib.Símbolo1();
 	this.pedido7.name = "pedido7";
-	this.pedido7.setTransform(517.2,1102.65,1,1,0,0,0,486.4,50.7);
+	this.pedido7.setTransform(517.2,1183.5,1,1,0,0,0,486.4,50.7);
 
 	this.pedido6 = new lib.Símbolo1();
 	this.pedido6.name = "pedido6";
-	this.pedido6.setTransform(517.2,961.1,1,1,0,0,0,486.4,50.7);
+	this.pedido6.setTransform(517.2,1041.95,1,1,0,0,0,486.4,50.7);
 
 	this.pedido5 = new lib.Símbolo1();
 	this.pedido5.name = "pedido5";
-	this.pedido5.setTransform(517.2,819.6,1,1,0,0,0,486.4,50.7);
+	this.pedido5.setTransform(517.2,900.45,1,1,0,0,0,486.4,50.7);
 
 	this.pedido4 = new lib.Símbolo1();
 	this.pedido4.name = "pedido4";
-	this.pedido4.setTransform(517.2,680,1,1,0,0,0,486.4,50.7);
+	this.pedido4.setTransform(517.2,760.85,1,1,0,0,0,486.4,50.7);
 
 	this.pedido3 = new lib.Símbolo1();
 	this.pedido3.name = "pedido3";
-	this.pedido3.setTransform(517.2,538.5,1,1,0,0,0,486.4,50.7);
+	this.pedido3.setTransform(517.2,619.35,1,1,0,0,0,486.4,50.7);
 
 	this.pedido2 = new lib.Símbolo1();
 	this.pedido2.name = "pedido2";
-	this.pedido2.setTransform(517.2,396.95,1,1,0,0,0,486.4,50.7);
+	this.pedido2.setTransform(517.2,477.8,1,1,0,0,0,486.4,50.7);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(5));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(377.4,864.5,1458.1999999999998,715.4000000000001);
+p.nominalBounds = new cjs.Rectangle(532.9,857.4,1302.6999999999998,820.0000000000001);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -456,7 +601,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743467485018", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743863785858", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };

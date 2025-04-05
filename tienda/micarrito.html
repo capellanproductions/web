@@ -1,68 +1,42 @@
 <!DOCTYPE html>
-<!--
-	NOTES:
-	1. All tokens are represented by '$' sign in the template.
-	2. You can write your code only wherever mentioned.
-	3. All occurrences of existing tokens will be replaced by their appropriate values.
-	4. Blank lines will be removed automatically.
-	5. Remove unnecessary comments before creating your template.
--->
-<html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>carrito</title>
-<!-- write your code here -->
-<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="carrito.js?1743467485053"></script>
-<script>
-var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-function init() {
-	canvas = document.getElementById("canvas");
-	anim_container = document.getElementById("animation_container");
-	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("745C8092FF6F4B4FB679F7E273BDF59E");
-	var lib=comp.getLibrary();
-	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
-	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
-	var lib=comp.getLibrary();
-	loader.loadManifest(lib.properties.manifest);
-}
-function handleFileLoad(evt, comp) {
-	var images=comp.getImages();	
-	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
-}
-function handleComplete(evt,comp) {
-	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-	var lib=comp.getLibrary();
-	var ss=comp.getSpriteSheet();
-	var queue = evt.target;
-	var ssMetadata = lib.ssMetadata;
-	for(i=0; i<ssMetadata.length; i++) {
-		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
-	}
-	exportRoot = new lib.carrito();
-	stage = new lib.Stage(canvas);	
-	//Registers the "tick" event listener.
-	fnStartAnimation = function() {
-		stage.addChild(exportRoot);
-		createjs.Ticker.framerate = lib.properties.fps;
-		createjs.Ticker.addEventListener("tick", stage);
-	}	    
-	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
-	AdobeAn.compositionLoaded(lib.properties.id);
-	fnStartAnimation();
-}
-</script>
-<!-- write your code here -->
+    <meta charset="UTF-8">
+    
+    <meta property="og:title" content="Los Mejores Productos">
+    <meta property="og:description" content="Tienda">
+    <meta property="og:image" content="https://lacosanostrackstudio.github.io/webs/viralsoundsocial/flayer.jpg">
+    <title>Los Mejores Productos</title>
+	
+    <style>
+        /* Reset de márgenes y padding */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo para los iframes */
+        iframe {
+            width: 1050px;
+            border: none;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
-<body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1050px; height:1700px">
-		<canvas id="canvas" width="1050" height="1700" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1050px; height:1700px; position: absolute; left: 0px; top: 0px; display: block;">
-		</div>
-	</div>
+<body>
+
+    <!-- Cargar la imagen top.png en un iframe -->
+    <iframe src="topminimal.html" height="260"></iframe>
+
+    <!-- Cargar el archivo productos.html en un iframe -->
+    <iframe src="carrito.html" height="1700"></iframe>
+
+	 <iframe src="borde.png" height="80"></iframe>
+	
+    <!-- Cargar la imagen bot.png en un iframe -->
+    <iframe src="footer.html" height="400"></iframe>
+
 </body>
 </html>
+
