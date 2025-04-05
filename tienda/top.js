@@ -27,35 +27,35 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_11 = function() {
+(lib.CachedBmp_16 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_10 = function() {
+(lib.CachedBmp_15 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_9 = function() {
+(lib.CachedBmp_14 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_8 = function() {
+(lib.CachedBmp_13 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_7 = function() {
+(lib.CachedBmp_12 = function() {
 	this.initialize(ss["top_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
@@ -305,7 +305,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_11();
+	this.instance = new lib.CachedBmp_16();
 	this.instance.setTransform(0,-144.8,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -662,10 +662,10 @@ if (reversed == null) { reversed = false; }
 	this.btinicio.name = "btinicio";
 	this.btinicio.setTransform(123.85,34.45,0.7134,1,0,0,0,93,33.5);
 
-	this.instance = new lib.CachedBmp_10();
+	this.instance = new lib.CachedBmp_15();
 	this.instance.setTransform(13.65,11.4,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_9();
+	this.instance_1 = new lib.CachedBmp_14();
 	this.instance_1.setTransform(425.65,11.4,0.5,0.5);
 
 	this.instance_2 = new lib.Símbolo2();
@@ -674,7 +674,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_3 = new lib.Símbolo2();
 	this.instance_3.setTransform(197.3,34,1,1,0,0,0,1.9,34);
 
-	this.instance_4 = new lib.CachedBmp_8();
+	this.instance_4 = new lib.CachedBmp_13();
 	this.instance_4.setTransform(203.65,11.4,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.btinicio},{t:this.btnosotros},{t:this.btcontactos}]}).wait(1));
@@ -985,15 +985,26 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1).call(this.frame_3).wait(1));
 
 	// Capa_1
+	this.instance = new lib.CachedBmp_12();
+	this.instance.setTransform(818.95,4,0.5,0.5);
+
+	this.total = new cjs.Text("00", "bold 60px 'Arial'", "#FF0000");
+	this.total.name = "total";
+	this.total.textAlign = "right";
+	this.total.lineHeight = 69;
+	this.total.lineWidth = 151;
+	this.total.parent = this;
+	this.total.setTransform(915.95,47.45);
+
 	this.logo = new lib.Símbolo6();
 	this.logo.name = "logo";
 	this.logo.setTransform(139.2,249.15,1,1,0,0,0,137.5,137.5);
 
-	this.instance = new lib.Símbolo18();
-	this.instance.setTransform(1159.45,335.2);
+	this.instance_1 = new lib.Símbolo18();
+	this.instance_1.setTransform(1159.45,335.2);
 
-	this.instance_1 = new lib.Símbolo4();
-	this.instance_1.setTransform(273.2,559.8,1,1,0,0,0,322.1,34);
+	this.instance_2 = new lib.Símbolo4();
+	this.instance_2.setTransform(273.2,559.8,1,1,0,0,0,322.1,34);
 
 	this.numerodepedido = new cjs.Text("", "20px 'Arial'");
 	this.numerodepedido.name = "numerodepedido";
@@ -1005,7 +1016,7 @@ if (reversed == null) { reversed = false; }
 
 	this.iralcarrito = new lib.Símbolo1();
 	this.iralcarrito.name = "iralcarrito";
-	this.iralcarrito.setTransform(792.1,4.25,1.3302,0.784,0,0,0,0.1,0.1);
+	this.iralcarrito.setTransform(792.1,0.25,1.3302,0.784,0,0,0,0.1,0.1);
 	this.iralcarrito.alpha = 0.0117;
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
@@ -1016,31 +1027,20 @@ if (reversed == null) { reversed = false; }
 	this.unidadescarrito.parent = this;
 	this.unidadescarrito.setTransform(1016.95,13);
 
-	this.instance_2 = new lib.Símbolo13();
-	this.instance_2.setTransform(1017.3,32.25,1,1,0,0,0,28.8,28.8);
+	this.instance_3 = new lib.Símbolo13();
+	this.instance_3.setTransform(1017.3,32.25,1,1,0,0,0,28.8,28.8);
 
-	this.instance_3 = new lib.Símbolo11();
-	this.instance_3.setTransform(975.15,76.5,0.3107,0.3107,0,0,0,110.5,101.7);
+	this.instance_4 = new lib.Símbolo11();
+	this.instance_4.setTransform(975.15,76.5,0.3107,0.3107,0,0,0,110.5,101.7);
 
-	this.instance_4 = new lib.Símbolo12();
-	this.instance_4.setTransform(979.2,73.8,0.6739,0.6739,0,0,0,85.7,85.8);
-
-	this.instance_5 = new lib.CachedBmp_7();
-	this.instance_5.setTransform(818.95,4,0.5,0.5);
-
-	this.total = new cjs.Text("00", "bold 60px 'Arial'", "#FF0000");
-	this.total.name = "total";
-	this.total.textAlign = "center";
-	this.total.lineHeight = 69;
-	this.total.lineWidth = 151;
-	this.total.parent = this;
-	this.total.setTransform(869.45,47.45);
+	this.instance_5 = new lib.Símbolo12();
+	this.instance_5.setTransform(979.2,73.8,0.6739,0.6739,0,0,0,85.7,85.8);
 
 	this.instance_6 = new lib.Símbolo3();
 	this.instance_6.setTransform(525,550.6,1,1,0,0,0,525,49.4);
 	this.instance_6.alpha = 0.5195;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_6},{t:this.total},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.unidadescarrito},{t:this.iralcarrito},{t:this.numerodepedido},{t:this.instance_1},{t:this.instance},{t:this.logo}]}).wait(4));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.unidadescarrito},{t:this.iralcarrito},{t:this.numerodepedido},{t:this.instance_2},{t:this.instance_1},{t:this.logo},{t:this.total},{t:this.instance}]}).wait(4));
 
 	// Capa_3
 	this.banners = new lib.Símbolo8();
@@ -1052,17 +1052,17 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(489.8,88,752,512);
+p.nominalBounds = new cjs.Rectangle(489.8,263,752,337);
 // library properties:
 lib.properties = {
 	id: 'E0636BAF6767B64590683251747ECF5E',
 	width: 1050,
-	height: 250,
+	height: 600,
 	fps: 60,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/top_atlas_1.png?1743854046709", id:"top_atlas_1"}
+		{src:"images/top_atlas_1.png?1743854240213", id:"top_atlas_1"}
 	],
 	preloads: []
 };
