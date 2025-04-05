@@ -678,7 +678,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/topmini_atlas_1.png?1743854463850", id:"topmini_atlas_1"}
+		{src:"images/topmini_atlas_1.png?1743854621267", id:"topmini_atlas_1"}
 	],
 	preloads: []
 };
