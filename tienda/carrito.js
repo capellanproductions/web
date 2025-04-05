@@ -362,7 +362,7 @@ if (reversed == null) { reversed = false; }
 
 	this.eliminar = new lib.Símbolo19();
 	this.eliminar.name = "eliminar";
-	this.eliminar.setTransform(975.7,47.6,1,1,44.9994,0,0,32.4,32.3);
+	this.eliminar.setTransform(1095.7,47.6,1,1,44.9994,0,0,32.4,32.3);
 
 	this.nota = new cjs.Text("", "19px 'Arial'", "#666666");
 	this.nota.name = "nota";
@@ -396,7 +396,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,0,1023.7,101.4), null);
+}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,0,1143.7,101.4), null);
 
 
 // stage content:
@@ -483,10 +483,10 @@ if (reversed == null) { reversed = false; }
 		        // Verificar si el campo producto está vacío
 		        if (!pedido.producto.text || pedido.producto.text.trim() === "") {
 		            pedido.unidad.alpha = 0;
-		            pedido.eliminar.alpha = 0;
+		            ///pedido.eliminar.alpha = 0;
 		        } else {
 		            pedido.unidad.alpha = 1;
-		            pedido.eliminar.alpha = 1;
+		            //pedido.eliminar.alpha = 1;
 		        }
 		    }
 		}
@@ -576,11 +576,7 @@ if (reversed == null) { reversed = false; }
 	this.botonEnviar.name = "botonEnviar";
 	this.botonEnviar.setTransform(527.35,170.4,1,1,0,0,0,138.1,41.1);
 
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AmUAVQgogDgRgQQgLgJABgRQAAgSAOgFIAEAnQHKAzHTgMQABAGgHAEQgGADgIABQh3ADh2AAQk5AAkygbg");
-	this.shape.setTransform(151.2092,140.1484);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(5));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(5));
 
 	// Capa_1
 	this.pedido1 = new lib.Símbolo1();
@@ -674,7 +670,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743868437326", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743868980277", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
