@@ -337,17 +337,19 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
-		// Suponiendo que el botón de eliminar es 'this.eliminar' y pertenece a un pedido específico
-		this.eliminar.addEventListener('click', function() {
-		    // Vaciar los campos de texto correspondientes
-		    this.producto.text = "";
+		this.eliminar.addEventListener("click", fl_MouseClickHandler.bind(this));
+		
+		function fl_MouseClickHandler()
+		{
+			
+			this.producto.text = "";
 		    this.nota.text = "";
 		    this.precio.text = "";
 		    this.unidades.text = "";
-		
-		    // Reproducir la animación o el comportamiento correspondiente
-		    exportroot.play();
-		});
+			
+			
+			exportRoot.play();
+		}
 	}
 
 	// actions tween:
@@ -473,7 +475,8 @@ if (reversed == null) { reversed = false; }
 		
 		
 		
-		///////////////////////alpha de eliminar y unidad//////////////////////////
+		////////////alpha 0 a unidad y eliminar/////////////////
+		
 		
 		for (let i = 0; i <= 11; i++) {
 		    let pedido = this['pedido' + i];
@@ -669,7 +672,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743866614401", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743867850941", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
