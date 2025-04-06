@@ -78,6 +78,29 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
+(lib.Símbolo25 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#000000").s().p("AnVC1IAAlqIOqAAIAAFqg");
+	this.shape.setTransform(46.95,18.15);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo25, new cjs.Rectangle(0,0,93.9,36.3), null);
+
+
 (lib.Símbolo22 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -620,15 +643,17 @@ if (reversed == null) { reversed = false; }
 		    
 		    window.open(enlace, "_blank");
 		}.bind(this));
+		this.btp.addEventListener("click", fl_MouseClickHandler_3.bind(this));
+		
+		function fl_MouseClickHandler_3()
+		{
+		
+			this.play();
+		}
 	}
 	this.frame_5 = function() {
 		localStorage.setItem('total', this.total.text);
 		    localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
-			
-		localStorage.setItem('producto1', this.pedido1.producto.text);
-		localStorage.setItem('precio1', this.pedido1.precio.text);
-		localStorage.setItem('nota1', this.pedido1.nota.text);
-		localStorage.setItem('unidades1', this.pedido1.unidades.text);
 	}
 
 	// actions tween:
@@ -641,6 +666,14 @@ if (reversed == null) { reversed = false; }
 	this.shape._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
+
+	// Capa_5
+	this.btp = new lib.Símbolo25();
+	this.btp.name = "btp";
+	this.btp.setTransform(169.75,79.6,1,1,0,0,0,47,18.2);
+	this.btp._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.btp).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
 
 	// Capa_4
 	this.vaciar = new lib.Símbolo10copia();
@@ -671,7 +704,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(779.5,199.35);
+	this.numerodepedido.setTransform(956.55,219.4);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -752,7 +785,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743962807351", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743962996916", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
