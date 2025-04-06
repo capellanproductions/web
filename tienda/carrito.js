@@ -78,29 +78,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
-(lib.Símbolo25 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AnVC1IAAlqIOqAAIAAFqg");
-	this.shape.setTransform(46.95,18.15);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo25, new cjs.Rectangle(0,0,93.9,36.3), null);
-
-
 (lib.Símbolo22 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -428,6 +405,13 @@ if (reversed == null) { reversed = false; }
 		    this.precio.text = "";
 		    this.unidades.text = "";
 		
+		
+			localStorage.setItem('producto' + this.numerodepedido.text, this[`pedido${this.numerodepedido.text}`].producto.text);
+			localStorage.setItem('precio' + this.numerodepedido.text, this[`pedido${this.numerodepedido.text}`].precio.text);
+			localStorage.setItem('nota' + this.numerodepedido.text, this[`pedido${this.numerodepedido.text}`].nota.text);
+			localStorage.setItem('unidades' + this.numerodepedido.text, this[`pedido${this.numerodepedido.text}`].unidades.text);
+		
+		
 		    exportRoot.play();
 		}
 	}
@@ -444,6 +428,13 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.bteliminar).wait(1));
 
 	// Capa_1
+	this.numerodepedido = new cjs.Text("", "25px 'Arial'", "#999999");
+	this.numerodepedido.name = "numerodepedido";
+	this.numerodepedido.lineHeight = 30;
+	this.numerodepedido.lineWidth = 37;
+	this.numerodepedido.parent = this;
+	this.numerodepedido.setTransform(47.95,-27.2);
+
 	this.unidad = new lib.Símbolo21();
 	this.unidad.name = "unidad";
 	this.unidad.setTransform(24.5,43.95,1,1,0,0,0,24.5,12.6);
@@ -480,11 +471,11 @@ if (reversed == null) { reversed = false; }
 	this.producto.parent = this;
 	this.producto.setTransform(96.65,30.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.producto},{t:this.precio},{t:this.unidades},{t:this.nota},{t:this.eliminar},{t:this.unidad}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.producto},{t:this.precio},{t:this.unidades},{t:this.nota},{t:this.eliminar},{t:this.unidad},{t:this.numerodepedido}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,0,1028.6,101.4), null);
+}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,-29.2,1028.6,130.6), null);
 
 
 // stage content:
@@ -578,6 +569,11 @@ if (reversed == null) { reversed = false; }
 		        }
 		    }
 		}
+		//////////////bucle numerod epedido///////////
+		
+		for (let i = 1; i <= 10; i++) {
+		    this[`pedido${i}`].numerodepedido.text = i.toString();
+		}
 		this.vaciar.on("click", function() {
 		  // 🔹 Borrar todo del localStorage
 		  localStorage.clear();
@@ -643,13 +639,6 @@ if (reversed == null) { reversed = false; }
 		    
 		    window.open(enlace, "_blank");
 		}.bind(this));
-		this.btp.addEventListener("click", fl_MouseClickHandler_3.bind(this));
-		
-		function fl_MouseClickHandler_3()
-		{
-		
-			this.play();
-		}
 	}
 	this.frame_5 = function() {
 		localStorage.setItem('total', this.total.text);
@@ -666,14 +655,6 @@ if (reversed == null) { reversed = false; }
 	this.shape._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
-
-	// Capa_5
-	this.btp = new lib.Símbolo25();
-	this.btp.name = "btp";
-	this.btp.setTransform(169.75,79.6,1,1,0,0,0,47,18.2);
-	this.btp._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.btp).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
 
 	// Capa_4
 	this.vaciar = new lib.Símbolo10copia();
@@ -704,7 +685,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(956.55,219.4);
+	this.numerodepedido.setTransform(418.15,22.8);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -785,7 +766,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743962996916", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743964348238", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
