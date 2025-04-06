@@ -401,7 +401,7 @@ if (reversed == null) { reversed = false; }
 		
 		    // Limpiar campos
 		    this.producto.text = "Eliminado";
-		    this.nota.text = "";
+		    this.nota.text = "Eliminado";
 		    this.precio.text = "0";
 		    this.unidades.text = "0";
 		
@@ -622,9 +622,9 @@ if (reversed == null) { reversed = false; }
 		}.bind(this));
 	}
 	this.frame_5 = function() {
-		this.stop();
+		//this.stop();
 		
-		localStorage.setItem('total', this.total.text);
+			localStorage.setItem('total', this.total.text);
 		    localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
 			
 		localStorage.setItem('producto1', this.pedido1.producto.text);
@@ -683,8 +683,8 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_2
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("ABZDYQkwhfkahvQBpgPBkAAIBuACQBCABAtgEQCBgNCjhNQBdgtC4hjQg2ArgZD9QgTC5inAAQg+AAhSgZg");
-	this.shape.setTransform(199.025,174.8823);
+	this.shape.graphics.f("#000000").s().p("AnxBmQBpgPBkAAIBuACQBCABAtgFQCBgNCjhMQBdgsC4hkQg2Ash5BzQh4B1jiARQgzAEg0AAQi0AAi/gvg");
+	this.shape.setTransform(199.025,165.6463);
 	this.shape._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
@@ -718,7 +718,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(323.8,73.95);
+	this.numerodepedido.setTransform(32.85,11.25);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -789,7 +789,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(555.8,864.5,1279.8,796.3);
+p.nominalBounds = new cjs.Rectangle(538.2,859.3,1297.3999999999999,801.5);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -799,7 +799,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743960142387", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743960840971", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
