@@ -78,6 +78,29 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
+(lib.Símbolo23 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#000000").s().p("AqqE5IAApxIVVAAIAAJxg");
+	this.shape.setTransform(68.25,31.3);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo23, new cjs.Rectangle(0,0,136.5,62.6), null);
+
+
 (lib.Símbolo22 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -364,22 +387,36 @@ if (reversed == null) { reversed = false; }
 		
 		function fl_MouseClickHandler()
 		{
-		    // Quitar el signo $ del precio si lo tiene
-		    var precioTexto = this.precio.text.replace("$", "");
-		    var precioValor = parseFloat(precioTexto) || 0;
+		    // Eliminar el signo $ del precio antes de convertirlo
+		    var precioTexto = this.precio.text.replace("$", "").replace(",", ""); // También se elimina la coma, por si existe
+		    var precioValor = parseFloat(precioTexto);  // Convertir a número
 		
-		    var unidadesValor = parseInt(this.unidades.text) || 0;
+		    var unidadesValor = parseInt(this.unidades.text) || 0; // Convertir unidades a número, en caso de que esté vacío o no sea un número
+		
+		    // Asegurarse de que precioValor y unidadesValor son números válidos
+		    if (isNaN(precioValor) || isNaN(unidadesValor)) {
+		        console.error("Error: precio o unidades no son válidos.");
+		        return; // Salir si algún valor no es un número válido
+		    }
 		
 		    // Calcular subtotal del producto eliminado
 		    var subtotal = precioValor * unidadesValor;
 		
 		    // Quitar el signo $ del total antes de convertirlo
-		    var totalTexto = exportRoot.total.text.replace("$", "");
-		    var totalActual = parseFloat(totalTexto) || 0;
+		    var totalTexto = exportRoot.total.text.replace("$", "").replace(",", ""); // También se elimina la coma
+		    var totalActual = parseFloat(totalTexto);  // Convertir a número
+		
+		    // Asegurarse de que totalActual es un número válido
+		    if (isNaN(totalActual)) {
+		        console.error("Error: el total actual no es un número válido.");
+		        return; // Salir si el total no es un número válido
+		    }
 		
 		    // Restar al total general
 		    var nuevoTotal = totalActual - subtotal;
-		    exportRoot.total.text = "$" + nuevoTotal.toFixed(2); // volver a poner el símbolo y redondear
+		
+		    // Actualizar el total sin redondear
+		    exportRoot.total.text = "$" + nuevoTotal; // No se redondea
 		
 		    // Restar unidades del carrito
 		    var unidadesCarrito = parseInt(exportRoot.unidadescarrito.text) || 0;
@@ -606,6 +643,34 @@ if (reversed == null) { reversed = false; }
 		    
 		    window.open(enlace, "_blank");
 		}.bind(this));
+		this.sumador.addEventListener("click", fl_MouseClickHandler.bind(this));
+		
+		function fl_MouseClickHandler() {
+		    // Obtener el valor actual de total y unidades
+		    var totalActual = parseFloat(this.total.text.replace("$", "")) || 0; // Quitar el signo $ y convertir a número
+		    var unidadesActual = parseInt(this.unidadescarrito.text) || 0; // Convertir a número
+		
+		    // Incrementar los valores
+		    totalActual += 25;
+		    unidadesActual += 1;
+		
+		    // Actualizar los valores
+		    this.total.text = "$" + totalActual;  // Volver a agregar el signo $
+		    this.unidadescarrito.text = unidadesActual;
+		}
+		
+		
+		this.pedido1.precio.text = "25";
+		
+		this.pedido1.unidades.text = "1";
+		
+		this.pedido1.producto.text = "sandwich";
+		
+		this.pedido2.precio.text = "25";
+		
+		this.pedido2.unidades.text = "1";
+		
+		this.pedido2.producto.text = "sandwich";
 	}
 	this.frame_5 = function() {
 		localStorage.setItem('total', this.total.text);
@@ -692,6 +757,10 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(6));
 
 	// Capa_1
+	this.sumador = new lib.Símbolo23();
+	this.sumador.name = "sumador";
+	this.sumador.setTransform(197.25,217.9,1,1,0,0,0,68.2,31.3);
+
 	this.pedido1 = new lib.Símbolo1();
 	this.pedido1.name = "pedido1";
 	this.pedido1.setTransform(517.2,327.25,1,1,0,0,0,486.4,50.7);
@@ -724,7 +793,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_3 = new lib.CachedBmp_16();
 	this.instance_3.setTransform(480.05,20.8,0.5,0.5);
 
-	this.total = new cjs.Text("$0.00", "bold 60px 'Arial'", "#FF0000");
+	this.total = new cjs.Text("$0", "bold 60px 'Arial'", "#FF0000");
 	this.total.name = "total";
 	this.total.textAlign = "center";
 	this.total.lineHeight = 69;
@@ -768,7 +837,7 @@ if (reversed == null) { reversed = false; }
 	this.pedido2.name = "pedido2";
 	this.pedido2.setTransform(517.2,477.8,1,1,0,0,0,486.4,50.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(6));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1},{t:this.sumador}]}).wait(6));
 
 	this._renderFirstFrame();
 
@@ -783,7 +852,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743958664328", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743959522827", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
