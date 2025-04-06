@@ -371,11 +371,17 @@ if (reversed == null) { reversed = false; }
 		    // Calcular subtotal del producto eliminado
 		    var subtotal = precioValor * unidadesValor;
 		
+		    // Quitar el signo $ del total antes de convertirlo
+		    var totalActual = exportRoot.total.text.replace("$", ""); // elimina el símbolo
+		    totalActual = parseFloat(totalActual) || 0;
+		
 		    // Restar al total general
-		    exportRoot.total.text = parseFloat(exportRoot.total.text) - subtotal;
+		    var nuevoTotal = totalActual - subtotal;
+		    exportRoot.total.text = "$" + nuevoTotal.toFixed(2); // volver a poner el símbolo y redondear
 		
 		    // Restar unidades del carrito
-		    exportRoot.unidadescarrito.text = parseInt(exportRoot.unidadescarrito.text) - unidadesValor;
+		    var unidadesCarrito = parseInt(exportRoot.unidadescarrito.text) || 0;
+		    exportRoot.unidadescarrito.text = unidadesCarrito - unidadesValor;
 		
 		    // Limpiar campos
 		    this.producto.text = "";
@@ -463,7 +469,7 @@ if (reversed == null) { reversed = false; }
 		
 		
 		// Verifica si 'total' existe en localStorage, si no, asigna "0"
-		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "0";
+		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "$0";
 		
 		
 		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
@@ -539,7 +545,7 @@ if (reversed == null) { reversed = false; }
 		
 		  // 🔹 Reiniciar número de pedido, total y unidades
 		  this.numerodepedido.text = "1";
-		  this.total.text = "0";
+		  this.total.text = "$0";
 		  this.unidadescarrito.text = "0";
 		
 		  // 🔹 Limpiar todos los campos de pedido
@@ -602,6 +608,17 @@ if (reversed == null) { reversed = false; }
 	this.frame_5 = function() {
 		localStorage.setItem('total', this.total.text);
 		    localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
+			
+		for (var i = 1; i <= 10; i++) {
+		    var pedido = this["pedido" + i];
+		
+		    if (pedido) {
+		        localStorage.setItem('producto' + i, pedido.producto.text);
+		        localStorage.setItem('precio' + i, pedido.precio.text);
+		        localStorage.setItem('nota' + i, pedido.nota.text);
+		        localStorage.setItem('unidades' + i, pedido.unidades.text);
+		    }
+		}
 	}
 
 	// actions tween:
@@ -666,7 +683,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_3 = new lib.CachedBmp_16();
 	this.instance_3.setTransform(480.05,20.8,0.5,0.5);
 
-	this.total = new cjs.Text("0", "bold 60px 'Arial'", "#FF0000");
+	this.total = new cjs.Text("$0.00", "bold 60px 'Arial'", "#FF0000");
 	this.total.name = "total";
 	this.total.textAlign = "center";
 	this.total.lineHeight = 69;
@@ -725,7 +742,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743956287975", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743957288900", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
