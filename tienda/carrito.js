@@ -406,7 +406,11 @@ if (reversed == null) { reversed = false; }
 		    this.unidades.text = "";
 		
 		
-		
+		        localStorage.setItem('producto' + numerodepedido, this.producto.text);
+		        localStorage.setItem('precio' + numerodepedido, this.precio.text);
+		        localStorage.setItem('nota' + numerodepedido, this.nota.text);
+		        localStorage.setItem('unidades' + numerodepedido, this.unidades.text);
+		        
 		
 		
 		    exportRoot.play();
@@ -682,7 +686,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(718.65,164.3);
+	this.numerodepedido.setTransform(376.85,22.8);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -763,7 +767,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743964621168", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743964902891", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
