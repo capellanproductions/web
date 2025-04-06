@@ -625,55 +625,24 @@ if (reversed == null) { reversed = false; }
 		localStorage.setItem('total', this.total.text);
 		    localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
 			
-		localStorage.setItem('producto1', this.pedido1.producto.text);
-		localStorage.setItem('precio1', this.pedido1.precio.text);
-		localStorage.setItem('nota1', this.pedido1.nota.text);
-		localStorage.setItem('unidades1', this.pedido1.unidades.text);
-		
-		localStorage.setItem('producto2', this.pedido2.producto.text);
-		localStorage.setItem('precio2', this.pedido2.precio.text);
-		localStorage.setItem('nota2', this.pedido2.nota.text);
-		localStorage.setItem('unidades2', this.pedido2.unidades.text);
-		
-		localStorage.setItem('producto3', this.pedido3.producto.text);
-		localStorage.setItem('precio3', this.pedido3.precio.text);
-		localStorage.setItem('nota3', this.pedido3.nota.text);
-		localStorage.setItem('unidades3', this.pedido3.unidades.text);
-		
-		localStorage.setItem('producto4', this.pedido4.producto.text);
-		localStorage.setItem('precio4', this.pedido4.precio.text);
-		localStorage.setItem('nota4', this.pedido4.nota.text);
-		localStorage.setItem('unidades4', this.pedido4.unidades.text);
-		
-		localStorage.setItem('producto5', this.pedido5.producto.text);
-		localStorage.setItem('precio5', this.pedido5.precio.text);
-		localStorage.setItem('nota5', this.pedido5.nota.text);
-		localStorage.setItem('unidades5', this.pedido5.unidades.text);
-		
-		localStorage.setItem('producto6', this.pedido6.producto.text);
-		localStorage.setItem('precio6', this.pedido6.precio.text);
-		localStorage.setItem('nota6', this.pedido6.nota.text);
-		localStorage.setItem('unidades6', this.pedido6.unidades.text);
-		
-		localStorage.setItem('producto7', this.pedido7.producto.text);
-		localStorage.setItem('precio7', this.pedido7.precio.text);
-		localStorage.setItem('nota7', this.pedido7.nota.text);
-		localStorage.setItem('unidades7', this.pedido7.unidades.text);
-		
-		localStorage.setItem('producto8', this.pedido8.producto.text);
-		localStorage.setItem('precio8', this.pedido8.precio.text);
-		localStorage.setItem('nota8', this.pedido8.nota.text);
-		localStorage.setItem('unidades8', this.pedido8.unidades.text);
-		
-		localStorage.setItem('producto9', this.pedido9.producto.text);
-		localStorage.setItem('precio9', this.pedido9.precio.text);
-		localStorage.setItem('nota9', this.pedido9.nota.text);
-		localStorage.setItem('unidades9', this.pedido9.unidades.text);
-		
-		localStorage.setItem('producto10', this.pedido10.producto.text);
-		localStorage.setItem('precio10', this.pedido10.precio.text);
-		localStorage.setItem('nota10', this.pedido10.nota.text);
-		localStorage.setItem('unidades10', this.pedido10.unidades.text);
+		for (let i = 1; i <= 10; i++) {
+		    // Verificar si el pedido y sus propiedades existen
+		    if (this[`pedido${i}`] && this[`pedido${i}`].producto && this[`pedido${i}`].precio && this[`pedido${i}`].nota && this[`pedido${i}`].unidades) {
+		        // Verificar y guardar solo si no existe en localStorage
+		        if (!localStorage.getItem(`producto${i}`)) {
+		            localStorage.setItem(`producto${i}`, this[`pedido${i}`].producto.text);
+		        }
+		        if (!localStorage.getItem(`precio${i}`)) {
+		            localStorage.setItem(`precio${i}`, this[`pedido${i}`].precio.text);
+		        }
+		        if (!localStorage.getItem(`nota${i}`)) {
+		            localStorage.setItem(`nota${i}`, this[`pedido${i}`].nota.text);
+		        }
+		        if (!localStorage.getItem(`unidades${i}`)) {
+		            localStorage.setItem(`unidades${i}`, this[`pedido${i}`].unidades.text);
+		        }
+		    }
+		}
 	}
 	this.frame_6 = function() {
 		this.gotoAndStop("ini");
@@ -719,7 +688,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(352.55,164.25);
+	this.numerodepedido.setTransform(25.75,22.8);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -790,7 +759,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(555.8,864.5,1279.8,796.3);
+p.nominalBounds = new cjs.Rectangle(531.1,864.5,1304.5,796.3);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -800,7 +769,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743961501009", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743962150681", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
