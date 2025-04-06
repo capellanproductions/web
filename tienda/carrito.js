@@ -635,9 +635,17 @@ if (reversed == null) { reversed = false; }
 		    }
 		}
 		
+		this.miTexto.text += "------------Total: " + this.total.text;
 		
-		/////////////////envia a wasap////////////
+		
+		// Envia a WhatsApp/////
 		this.botonEnviar.addEventListener("click", function() {
+		    // Verificar si unidadescarrito es igual a 0
+		    if (this.unidadescarrito.text == "0") {
+		        // Si es 0, no se ejecuta el código
+		        return;
+		    }
+		    
 		    var numero = "18496532129"; // Reemplaza con tu número de WhatsApp
 		    var mensaje = encodeURIComponent(this.miTexto.text); // Obtiene el texto del campo
 		    var enlace = "https://wa.me/" + numero + "?text=" + mensaje;
@@ -790,7 +798,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743966864876", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743967658414", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
