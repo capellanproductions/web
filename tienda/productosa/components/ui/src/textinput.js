@@ -8,7 +8,7 @@
             'position': 'absolute',
             'rows': 5,
             'cols': 30,
-            'fontSize': '5vw' // o prueba con '5vw' para tamaño relativo al ancho de la pantalla
+            'fontSize': '35px' // Tamaño de la fuente
         },
         _props: ["left", "top", "width", "height", "position", "transform-origin", "transform", "rows", "cols", "fontSize"],
         _attrs: ["id", "disabled", "class", "rows", "cols"],
@@ -17,7 +17,8 @@
         },
         getCreateString: function() {
             return "<textarea id='" + this.options.id + "' rows='" + this.options.rows + "' cols='" + this.options.cols + 
-                   "' style='resize: none; border: none; outline: none; background: transparent; font-size: " + this.options.fontSize + ";'></textarea>";
+                   "' style='resize: none; border: none; outline: none; background: transparent; font-size: " + this.options.fontSize + 
+                   " !important; font-family: Arial, sans-serif;'></textarea>";
         },
         getProperties: function() {
             return this._props;
@@ -28,3 +29,4 @@
     });
 
 })(jQuery);
+
