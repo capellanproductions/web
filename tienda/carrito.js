@@ -405,6 +405,8 @@ if (reversed == null) { reversed = false; }
 		    this.precio.text = "";
 		    this.unidades.text = "";
 		
+			this.numerodepedido.text = (parseInt(this.numerodepedido.text) + 1).toString();
+		
 		
 		        localStorage.setItem('producto' + this.numerodepedido.text, this.producto.text);
 		        localStorage.setItem('precio' + this.numerodepedido.text, this.precio.text);
@@ -434,7 +436,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 30;
 	this.numerodepedido.lineWidth = 37;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(47.95,-27.2);
+	this.numerodepedido.setTransform(-24.65,27.25);
 
 	this.unidad = new lib.Símbolo21();
 	this.unidad.name = "unidad";
@@ -476,7 +478,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,-29.2,1028.6,130.6), null);
+}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(-26.6,0,1055.1999999999998,101.4), null);
 
 
 // stage content:
@@ -686,7 +688,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(376.85,22.8);
+	this.numerodepedido.setTransform(28.8,7.75);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -757,7 +759,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(555.8,864.5,1279.8,796.3);
+p.nominalBounds = new cjs.Rectangle(529.2,855.8,1306.3999999999999,805);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -767,7 +769,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743965026810", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743965429821", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
