@@ -609,16 +609,55 @@ if (reversed == null) { reversed = false; }
 		localStorage.setItem('total', this.total.text);
 		    localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
 			
-		for (var i = 1; i <= 10; i++) {
-		    var pedido = this["pedido" + i];
+		localStorage.setItem('producto1', this.pedido1.producto.text);
+		localStorage.setItem('precio1', this.pedido1.precio.text);
+		localStorage.setItem('nota1', this.pedido1.nota.text);
+		localStorage.setItem('unidades1', this.pedido1.unidades.text);
 		
-		    if (pedido) {
-		        localStorage.setItem('producto' + i, pedido.producto.text);
-		        localStorage.setItem('precio' + i, pedido.precio.text);
-		        localStorage.setItem('nota' + i, pedido.nota.text);
-		        localStorage.setItem('unidades' + i, pedido.unidades.text);
-		    }
-		}
+		localStorage.setItem('producto2', this.pedido2.producto.text);
+		localStorage.setItem('precio2', this.pedido2.precio.text);
+		localStorage.setItem('nota2', this.pedido2.nota.text);
+		localStorage.setItem('unidades2', this.pedido2.unidades.text);
+		
+		localStorage.setItem('producto3', this.pedido3.producto.text);
+		localStorage.setItem('precio3', this.pedido3.precio.text);
+		localStorage.setItem('nota3', this.pedido3.nota.text);
+		localStorage.setItem('unidades3', this.pedido3.unidades.text);
+		
+		localStorage.setItem('producto4', this.pedido4.producto.text);
+		localStorage.setItem('precio4', this.pedido4.precio.text);
+		localStorage.setItem('nota4', this.pedido4.nota.text);
+		localStorage.setItem('unidades4', this.pedido4.unidades.text);
+		
+		localStorage.setItem('producto5', this.pedido5.producto.text);
+		localStorage.setItem('precio5', this.pedido5.precio.text);
+		localStorage.setItem('nota5', this.pedido5.nota.text);
+		localStorage.setItem('unidades5', this.pedido5.unidades.text);
+		
+		localStorage.setItem('producto6', this.pedido6.producto.text);
+		localStorage.setItem('precio6', this.pedido6.precio.text);
+		localStorage.setItem('nota6', this.pedido6.nota.text);
+		localStorage.setItem('unidades6', this.pedido6.unidades.text);
+		
+		localStorage.setItem('producto7', this.pedido7.producto.text);
+		localStorage.setItem('precio7', this.pedido7.precio.text);
+		localStorage.setItem('nota7', this.pedido7.nota.text);
+		localStorage.setItem('unidades7', this.pedido7.unidades.text);
+		
+		localStorage.setItem('producto8', this.pedido8.producto.text);
+		localStorage.setItem('precio8', this.pedido8.precio.text);
+		localStorage.setItem('nota8', this.pedido8.nota.text);
+		localStorage.setItem('unidades8', this.pedido8.unidades.text);
+		
+		localStorage.setItem('producto9', this.pedido9.producto.text);
+		localStorage.setItem('precio9', this.pedido9.precio.text);
+		localStorage.setItem('nota9', this.pedido9.nota.text);
+		localStorage.setItem('unidades9', this.pedido9.unidades.text);
+		
+		localStorage.setItem('producto10', this.pedido10.producto.text);
+		localStorage.setItem('precio10', this.pedido10.precio.text);
+		localStorage.setItem('nota10', this.pedido10.nota.text);
+		localStorage.setItem('unidades10', this.pedido10.unidades.text);
 	}
 
 	// actions tween:
@@ -742,7 +781,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743957288900", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743957830041", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
