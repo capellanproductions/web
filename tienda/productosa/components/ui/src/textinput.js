@@ -8,7 +8,7 @@
             'position': 'absolute',
             'rows': 5,
             'cols': 30,
-            'fontSize': '25px' // Tamaño de la fuente
+            'fontSize': '1.6rem' // o prueba con '5vw' para tamaño relativo al ancho de la pantalla
         },
         _props: ["left", "top", "width", "height", "position", "transform-origin", "transform", "rows", "cols", "fontSize"],
         _attrs: ["id", "disabled", "class", "rows", "cols"],
