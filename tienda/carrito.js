@@ -783,7 +783,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743958481769", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743958664328", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
