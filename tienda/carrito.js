@@ -406,10 +406,7 @@ if (reversed == null) { reversed = false; }
 		    this.unidades.text = "";
 		
 		
-			localStorage.setItem('producto' + this.numerodepedido.text, this[`pedido${this.numerodepedido.text}`].producto.text);
-			localStorage.setItem('precio' + this.numerodepedido.text, this[`pedido${this.numerodepedido.text}`].precio.text);
-			localStorage.setItem('nota' + this.numerodepedido.text, this[`pedido${this.numerodepedido.text}`].nota.text);
-			localStorage.setItem('unidades' + this.numerodepedido.text, this[`pedido${this.numerodepedido.text}`].unidades.text);
+		
 		
 		
 		    exportRoot.play();
@@ -485,7 +482,7 @@ if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
 	props.startPosition = startPosition;
-	props.labels = {ini:4};
+	props.labels = {};
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
@@ -685,7 +682,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(418.15,22.8);
+	this.numerodepedido.setTransform(718.65,164.3);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -766,7 +763,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743964348238", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743964621168", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
