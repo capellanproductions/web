@@ -452,6 +452,16 @@ if (reversed == null) { reversed = false; }
 		var numeroPedidoGuardado = localStorage.getItem('datos1');
 		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
 		
+		
+			/////////////////////////////////////////////////////////////
+		// Verifica si 'total' existe en localStorage, si no, asigna "0"
+		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "$0";
+		
+		
+		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
+		this.unidadescarrito.text = localStorage.getItem('unidadescarrito') ? localStorage.getItem('unidadescarrito') : "0";
+		
+		
 		function leerDatosLocalStorage() {
 		
 			/////////////////////////////////////////////////////////////
@@ -674,7 +684,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/topmini_atlas_1.png?1743951942567", id:"topmini_atlas_1"}
+		{src:"images/topmini_atlas_1.png?1743952216950", id:"topmini_atlas_1"}
 	],
 	preloads: []
 };
