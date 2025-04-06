@@ -406,10 +406,10 @@ if (reversed == null) { reversed = false; }
 		    this.unidades.text = "";
 		
 		
-		        localStorage.setItem('producto' + numerodepedido, this.producto.text);
-		        localStorage.setItem('precio' + numerodepedido, this.precio.text);
-		        localStorage.setItem('nota' + numerodepedido, this.nota.text);
-		        localStorage.setItem('unidades' + numerodepedido, this.unidades.text);
+		        localStorage.setItem('producto' + this.numerodepedido.text, this.producto.text);
+		        localStorage.setItem('precio' + this.numerodepedido.text, this.precio.text);
+		        localStorage.setItem('nota' + this.numerodepedido.text, this.nota.text);
+		        localStorage.setItem('unidades' + this.numerodepedido.text, this.unidades.text);
 		        
 		
 		
@@ -767,7 +767,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743964902891", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743965026810", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
