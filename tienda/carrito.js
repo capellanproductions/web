@@ -78,29 +78,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
-(lib.Símbolo24 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AnIDCIAAmDIORAAIAAGDg");
-	this.shape.setTransform(45.7,19.4);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo24, new cjs.Rectangle(0,0,91.4,38.8), null);
-
-
 (lib.Símbolo22 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -428,7 +405,7 @@ if (reversed == null) { reversed = false; }
 		    this.precio.text = "";
 		    this.unidades.text = "";
 		
-		    //exportRoot.play();
+		    exportRoot.play();
 		}
 	}
 
@@ -494,12 +471,12 @@ if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
 	props.startPosition = startPosition;
-	props.labels = {};
+	props.labels = {ini:4};
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0,4,5];
+	this.actionFrames = [0,4,5,6];
 	// timeline functions:
 	this.frame_0 = function() {
 		//// Al abrir la página, obtener el número de pedido desde localStorage////
@@ -643,17 +620,9 @@ if (reversed == null) { reversed = false; }
 		    
 		    window.open(enlace, "_blank");
 		}.bind(this));
-		this.btp.addEventListener("click", fl_MouseClickHandler_2.bind(this));
-		
-		function fl_MouseClickHandler_2()
-		{
-			this.play();
-		}
 	}
 	this.frame_5 = function() {
-		//this.stop();
-		
-			localStorage.setItem('total', this.total.text);
+		localStorage.setItem('total', this.total.text);
 		    localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
 			
 		localStorage.setItem('producto1', this.pedido1.producto.text);
@@ -706,9 +675,12 @@ if (reversed == null) { reversed = false; }
 		localStorage.setItem('nota10', this.pedido10.nota.text);
 		localStorage.setItem('unidades10', this.pedido10.unidades.text);
 	}
+	this.frame_6 = function() {
+		this.gotoAndStop("ini");
+	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(4).call(this.frame_4).wait(1).call(this.frame_5).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(4).call(this.frame_4).wait(1).call(this.frame_5).wait(1).call(this.frame_6).wait(1));
 
 	// Capa_2
 	this.shape = new cjs.Shape();
@@ -716,15 +688,7 @@ if (reversed == null) { reversed = false; }
 	this.shape.setTransform(199.025,165.6463);
 	this.shape._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
-
-	// Capa_3
-	this.btp = new lib.Símbolo24();
-	this.btp.name = "btp";
-	this.btp.setTransform(208.5,98.3,1,1,0,0,0,45.7,19.4);
-	this.btp._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.btp).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(2));
 
 	// Capa_4
 	this.vaciar = new lib.Símbolo10copia();
@@ -742,7 +706,7 @@ if (reversed == null) { reversed = false; }
 	this.botonEnviar.name = "botonEnviar";
 	this.botonEnviar.setTransform(527.35,170.4,1,1,0,0,0,138.1,41.1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(6));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(7));
 
 	// Capa_1
 	this.pedido1 = new lib.Símbolo1();
@@ -821,7 +785,7 @@ if (reversed == null) { reversed = false; }
 	this.pedido2.name = "pedido2";
 	this.pedido2.setTransform(517.2,477.8,1,1,0,0,0,486.4,50.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(6));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(7));
 
 	this._renderFirstFrame();
 
@@ -836,7 +800,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743961278663", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743961501009", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
