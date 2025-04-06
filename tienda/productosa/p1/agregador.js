@@ -27,42 +27,42 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_9 = function() {
+(lib.CachedBmp_26 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_8 = function() {
+(lib.CachedBmp_25 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_7 = function() {
+(lib.CachedBmp_24 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_6 = function() {
+(lib.CachedBmp_23 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_5 = function() {
+(lib.CachedBmp_22 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_4 = function() {
+(lib.CachedBmp_21 = function() {
 	this.initialize(ss["agregador_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
@@ -97,6 +97,29 @@ p._handleDrawEnd = _handleDrawEnd;
 p._updateVisibility = _updateVisibility;
 p.draw = _componentDraw;
 
+
+
+(lib.Símbolo22 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AuwVBMAAAgqBIdhAAMAAAAqBg");
+	this.shape.setTransform(94.5,134.475);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo22, new cjs.Rectangle(0,0,189,269), null);
 
 
 (lib.Símbolo21 = function(mode,startPosition,loop,reversed) {
@@ -134,7 +157,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_9();
+	this.instance = new lib.CachedBmp_26();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -498,7 +521,7 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.Símbolo11();
 	this.instance.setTransform(212.55,42.2,0.199,0.199,0,0,0,110.8,101.8);
 
-	this.instance_1 = new lib.CachedBmp_8();
+	this.instance_1 = new lib.CachedBmp_25();
 	this.instance_1.setTransform(49.45,20.15,0.5,0.5);
 
 	this.instance_2 = new lib.Símbolo8();
@@ -523,17 +546,21 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_7();
-	this.instance.setTransform(11.4,19.8,0.5,0.5);
+	this.instance = new lib.Símbolo22();
+	this.instance.setTransform(429.5,9.45,1,1,0,0,0,94.5,134.4);
+	this.instance.alpha = 0.0117;
 
-	this.instance_1 = new lib.Símbolo9();
-	this.instance_1.setTransform(138.1,41.1,1,1,0,0,0,138.1,41.1);
+	this.instance_1 = new lib.CachedBmp_24();
+	this.instance_1.setTransform(11.4,19.8,0.5,0.5);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.instance_2 = new lib.Símbolo9();
+	this.instance_2.setTransform(138.1,41.1,1,1,0,0,0,138.1,41.1);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Símbolo14, new cjs.Rectangle(0,0,276.1,82.4), null);
+}).prototype = getMCSymbolPrototype(lib.Símbolo14, new cjs.Rectangle(0,-124.9,524,268.9), null);
 
 
 (lib.Símbolo6 = function(mode,startPosition,loop,reversed) {
@@ -738,6 +765,8 @@ if (reversed == null) { reversed = false; }
 		
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// Al abrir la página, obtener el número de pedido desde localStorage
+		this.stop();
+		
 		var numeroPedidoGuardado = localStorage.getItem('datos1');
 		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
 		
@@ -752,6 +781,29 @@ if (reversed == null) { reversed = false; }
 		
 		
 		
+		function hacer() {
+		    var numeroPedidoGuardado = localStorage.getItem('datos1');
+		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
+		
+		
+		// Verifica si 'total' existe en localStorage, si no, asigna "0"
+		this.total.text = localStorage.getItem('total') ? localStorage.getItem('total') : "0";
+		
+		
+		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
+		this.unidadescarrito.text = localStorage.getItem('unidadescarrito') ? localStorage.getItem('unidadescarrito') : "0";
+		}
+		
+		// Usando bind para asegurarse de que el contexto de `this` se mantenga
+		setInterval(hacer.bind(this), 2000);
+		
+		
+		
+		
+		
+		
+		
+		////////////////////////////////////////////
 		
 		// Si no existe el número de pedido o el tiempo guardado, inicializar todo
 		if (!numeroPedidoGuardado || !tiempoGuardado) {
@@ -759,7 +811,7 @@ if (reversed == null) { reversed = false; }
 		} else {
 		    // Calcular el tiempo transcurrido
 		    var tiempoTranscurrido = Date.now() - parseInt(tiempoGuardado);
-		    if (tiempoTranscurrido > 60000) { // Si han pasado más de 1 minuto (60000 ms)
+		    if (tiempoTranscurrido > 900000) { // Si han pasado más de 15 minutos (900000 ms)
 				this.numerodepedido.text = "1"; 
 				this.total.text = "0"; 
 				this.unidadescarrito.text = "0"; 
@@ -810,7 +862,7 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_1
 	this.instance = new lib.Símbolo21();
-	this.instance.setTransform(222.6,324.05,1,1,0,0,0,213.6,30.2);
+	this.instance.setTransform(222.6,317.05,1,1,0,0,0,213.6,30.2);
 
 	this.carritolleno = new lib.Símbolo19();
 	this.carritolleno.name = "carritolleno";
@@ -878,13 +930,13 @@ if (reversed == null) { reversed = false; }
 	this.producto.parent = this;
 	this.producto.setTransform(328.5,-157.25);
 
-	this.instance_1 = new lib.CachedBmp_6();
-	this.instance_1.setTransform(12.5,267.5,0.5,0.5);
+	this.instance_1 = new lib.CachedBmp_23();
+	this.instance_1.setTransform(12.5,260.5,0.5,0.5);
 
 	this.notaadicional = new lib.an_TextInput({'id': 'notaadicional', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
 
 	this.notaadicional.name = "notaadicional";
-	this.notaadicional.setTransform(13.75,297.4,4.198,3.1456,0,0,0,0.3,0.1);
+	this.notaadicional.setTransform(13.75,290.4,4.198,3.1456,0,0,0,0.3,0.1);
 
 	this.agregar = new lib.Símbolo15();
 	this.agregar.name = "agregar";
@@ -911,7 +963,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_4 = new lib.Símbolo12();
 	this.instance_4.setTransform(945.95,84.8,0.6739,0.6739,0,0,0,85.7,85.8);
 
-	this.instance_5 = new lib.CachedBmp_5();
+	this.instance_5 = new lib.CachedBmp_22();
 	this.instance_5.setTransform(899.35,154.4,0.5,0.5);
 
 	this.total = new cjs.Text("00", "bold 60px 'Arial'", "#FF0000");
@@ -945,7 +997,7 @@ if (reversed == null) { reversed = false; }
 	this.unidades.parent = this;
 	this.unidades.setTransform(99.55,54.5);
 
-	this.instance_6 = new lib.CachedBmp_4();
+	this.instance_6 = new lib.CachedBmp_21();
 	this.instance_6.setTransform(34.75,2.3,0.5,0.5);
 
 	this.instance_7 = new lib.Símbolo7();
@@ -973,10 +1025,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/agregador_atlas_1.png?1743466214298", id:"agregador_atlas_1"},
-		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1743466214340", id:"lib/jquery-3.4.1.min.js"},
-		{src:"components/sdk/anwidget.js?1743466214340", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1743466214340", id:"an.TextInput"}
+		{src:"images/agregador_atlas_1.png?1743954118149", id:"agregador_atlas_1"},
+		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1743954118190", id:"lib/jquery-3.4.1.min.js"},
+		{src:"components/sdk/anwidget.js?1743954118190", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1743954118190", id:"an.TextInput"}
 	],
 	preloads: []
 };
