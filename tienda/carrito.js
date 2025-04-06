@@ -476,7 +476,7 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0,4,5,6];
+	this.actionFrames = [0,4,5];
 	// timeline functions:
 	this.frame_0 = function() {
 		//// Al abrir la página, obtener el número de pedido desde localStorage////
@@ -644,12 +644,9 @@ if (reversed == null) { reversed = false; }
 		    }
 		}
 	}
-	this.frame_6 = function() {
-		this.gotoAndStop("ini");
-	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(4).call(this.frame_4).wait(1).call(this.frame_5).wait(1).call(this.frame_6).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(4).call(this.frame_4).wait(1).call(this.frame_5).wait(1));
 
 	// Capa_2
 	this.shape = new cjs.Shape();
@@ -657,7 +654,7 @@ if (reversed == null) { reversed = false; }
 	this.shape.setTransform(199.025,165.6463);
 	this.shape._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(2));
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
 
 	// Capa_4
 	this.vaciar = new lib.Símbolo10copia();
@@ -675,7 +672,7 @@ if (reversed == null) { reversed = false; }
 	this.botonEnviar.name = "botonEnviar";
 	this.botonEnviar.setTransform(527.35,170.4,1,1,0,0,0,138.1,41.1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(7));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(6));
 
 	// Capa_1
 	this.pedido1 = new lib.Símbolo1();
@@ -688,7 +685,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(25.75,22.8);
+	this.numerodepedido.setTransform(763.25,22.8);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -754,12 +751,12 @@ if (reversed == null) { reversed = false; }
 	this.pedido2.name = "pedido2";
 	this.pedido2.setTransform(517.2,477.8,1,1,0,0,0,486.4,50.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(7));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(6));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(531.1,864.5,1304.5,796.3);
+p.nominalBounds = new cjs.Rectangle(555.8,864.5,1279.8,796.3);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -769,7 +766,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743962150681", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743962373856", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
