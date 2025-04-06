@@ -402,8 +402,8 @@ if (reversed == null) { reversed = false; }
 		    // Limpiar campos
 		    this.producto.text = "Eliminado";
 		    this.nota.text = "";
-		    this.precio.text = "";
-		    this.unidades.text = "";
+		    this.precio.text = "0";
+		    this.unidades.text = "0";
 		
 		    exportRoot.play();
 		}
@@ -716,7 +716,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(-7.25,-50.75);
+	this.numerodepedido.setTransform(96.85,73.95);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -787,7 +787,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(498.1,797.3,1337.5,863.5);
+p.nominalBounds = new cjs.Rectangle(555.8,864.5,1279.8,796.3);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -797,7 +797,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743959671210", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743959910947", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
