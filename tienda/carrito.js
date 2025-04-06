@@ -463,7 +463,7 @@ if (reversed == null) { reversed = false; }
 		
 		
 		// Verifica si 'total' existe en localStorage, si no, asigna "0"
-		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "$0";
+		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "0";
 		
 		
 		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
@@ -539,7 +539,7 @@ if (reversed == null) { reversed = false; }
 		
 		  // 🔹 Reiniciar número de pedido, total y unidades
 		  this.numerodepedido.text = "1";
-		  this.total.text = "$0";
+		  this.total.text = "0";
 		  this.unidadescarrito.text = "0";
 		
 		  // 🔹 Limpiar todos los campos de pedido
@@ -602,10 +602,6 @@ if (reversed == null) { reversed = false; }
 	this.frame_5 = function() {
 		localStorage.setItem('total', this.total.text);
 		    localStorage.setItem('unidadescarrito', this.unidadescarrito.text);
-			
-			if (isNaN(this.total.text)) {
-		    this.total.text = 0;
-		}
 	}
 
 	// actions tween:
@@ -729,7 +725,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743955915716", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743956287975", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
