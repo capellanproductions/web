@@ -78,29 +78,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
-(lib.Símbolo23 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AqqE5IAApxIVVAAIAAJxg");
-	this.shape.setTransform(68.25,31.3);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo23, new cjs.Rectangle(0,0,136.5,62.6), null);
-
-
 (lib.Símbolo22 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -643,34 +620,6 @@ if (reversed == null) { reversed = false; }
 		    
 		    window.open(enlace, "_blank");
 		}.bind(this));
-		this.sumador.addEventListener("click", fl_MouseClickHandler.bind(this));
-		
-		function fl_MouseClickHandler() {
-		    // Obtener el valor actual de total y unidades
-		    var totalActual = parseFloat(this.total.text.replace("$", "")) || 0; // Quitar el signo $ y convertir a número
-		    var unidadesActual = parseInt(this.unidadescarrito.text) || 0; // Convertir a número
-		
-		    // Incrementar los valores
-		    totalActual += 25;
-		    unidadesActual += 1;
-		
-		    // Actualizar los valores
-		    this.total.text = "$" + totalActual;  // Volver a agregar el signo $
-		    this.unidadescarrito.text = unidadesActual;
-		}
-		
-		
-		this.pedido1.precio.text = "25";
-		
-		this.pedido1.unidades.text = "1";
-		
-		this.pedido1.producto.text = "sandwich";
-		
-		this.pedido2.precio.text = "25";
-		
-		this.pedido2.unidades.text = "1";
-		
-		this.pedido2.producto.text = "sandwich";
 	}
 	this.frame_5 = function() {
 		localStorage.setItem('total', this.total.text);
@@ -732,8 +681,8 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_2
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AnxB1QBpgQBkAAIBuACQBCABAtgEQCBgNCjhNQBdgsC4hjQg2ArgeAWQi7CFj3AuQh7AXiAAAQhvAAhzgRg");
-	this.shape.setTransform(199.025,164.1735);
+	this.shape.graphics.f("#000000").s().p("ABZDYQkwhfkahvQBpgPBkAAIBuACQBCABAtgEQCBgNCjhNQBdgtC4hjQg2ArgZD9QgTC5inAAQg+AAhSgZg");
+	this.shape.setTransform(199.025,174.8823);
 	this.shape._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
@@ -757,10 +706,6 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(6));
 
 	// Capa_1
-	this.sumador = new lib.Símbolo23();
-	this.sumador.name = "sumador";
-	this.sumador.setTransform(197.25,217.9,1,1,0,0,0,68.2,31.3);
-
 	this.pedido1 = new lib.Símbolo1();
 	this.pedido1.name = "pedido1";
 	this.pedido1.setTransform(517.2,327.25,1,1,0,0,0,486.4,50.7);
@@ -837,7 +782,7 @@ if (reversed == null) { reversed = false; }
 	this.pedido2.name = "pedido2";
 	this.pedido2.setTransform(517.2,477.8,1,1,0,0,0,486.4,50.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1},{t:this.sumador}]}).wait(6));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(6));
 
 	this._renderFirstFrame();
 
@@ -852,7 +797,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743959522827", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743959671210", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
