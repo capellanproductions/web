@@ -565,12 +565,12 @@ if (reversed == null) { reversed = false; }
 		            pedido.unidad.alpha = 0;
 					
 		            pedido.eliminar.x = 1200;
-					pedido.eliminar.y = 2;
+					
 		        } else {
 		            pedido.unidad.alpha = 1;
 					
 					pedido.eliminar.x = 980;
-					pedido.eliminar.y = 2;
+					
 		        }
 		    }
 		}
@@ -790,7 +790,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743966493272", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743966864876", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
