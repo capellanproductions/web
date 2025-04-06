@@ -453,30 +453,14 @@ if (reversed == null) { reversed = false; }
 		var tiempoGuardado = localStorage.getItem('tiempoGuardado');
 		
 		
-			/////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////
+		
 		// Verifica si 'total' existe en localStorage, si no, asigna "0"
 		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "$0";
 		
 		
 		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
 		this.unidadescarrito.text = localStorage.getItem('unidadescarrito') ? localStorage.getItem('unidadescarrito') : "0";
-		
-		
-		function leerDatosLocalStorage() {
-		
-			/////////////////////////////////////////////////////////////
-		// Verifica si 'total' existe en localStorage, si no, asigna "0"
-		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "$0";
-		
-		
-		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
-		this.unidadescarrito.text = localStorage.getItem('unidadescarrito') ? localStorage.getItem('unidadescarrito') : "0";
-		
-		}
-		
-		// Ejecutar la función cada 3 segundos
-		setInterval(leerDatosLocalStorage, 3000);
-		
 		
 		
 		
@@ -564,6 +548,14 @@ if (reversed == null) { reversed = false; }
 		        // Llamar a 'this.play()' cuando la animación de escalado termine
 		        this.play();
 		    }.bind(this)); // Usamos '.bind(this)' para asegurar que 'this' se mantenga dentro del contexto correcto
+		
+		
+		// Verifica si 'total' existe en localStorage, si no, asigna "0"
+		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "$0";
+		
+		
+		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
+		this.unidadescarrito.text = localStorage.getItem('unidadescarrito') ? localStorage.getItem('unidadescarrito') : "0";
 	}
 	this.frame_2 = function() {
 		this.stop();
@@ -584,6 +576,14 @@ if (reversed == null) { reversed = false; }
 		        // Llamar a 'this.play()' cuando la animación de escalado termine
 		        this.play();
 		    }.bind(this)); // Usamos '.bind(this)' para asegurar que 'this' se mantenga dentro del contexto correcto
+		
+		
+		// Verifica si 'total' existe en localStorage, si no, asigna "0"
+		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "$0";
+		
+		
+		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
+		this.unidadescarrito.text = localStorage.getItem('unidadescarrito') ? localStorage.getItem('unidadescarrito') : "0";
 	}
 	this.frame_3 = function() {
 		this.stop();
@@ -604,6 +604,14 @@ if (reversed == null) { reversed = false; }
 		        // Llamar a 'this.play()' cuando la animación de escalado termine
 		        this.play();
 		    }.bind(this)); // Usamos '.bind(this)' para asegurar que 'this' se mantenga dentro del contexto correcto
+		
+		
+		// Verifica si 'total' existe en localStorage, si no, asigna "0"
+		this.total.text = localStorage.getItem('total') ?  localStorage.getItem('total') : "$0";
+		
+		
+		// Verifica si 'unidadescarrito' existe en localStorage, si no, asigna "0"
+		this.unidadescarrito.text = localStorage.getItem('unidadescarrito') ? localStorage.getItem('unidadescarrito') : "0";
 	}
 
 	// actions tween:
@@ -684,7 +692,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/topmini_atlas_1.png?1743952216950", id:"topmini_atlas_1"}
+		{src:"images/topmini_atlas_1.png?1743952842949", id:"topmini_atlas_1"}
 	],
 	preloads: []
 };
