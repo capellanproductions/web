@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"carrito_atlas_1", frames: [[554,0,98,51],[0,167,504,82],[0,251,504,82],[0,0,552,165],[506,167,210,75]]}
+		{name:"carrito_atlas_1", frames: [[0,167,2006,2],[1778,0,98,51],[554,0,504,82],[1060,0,504,82],[0,0,552,165],[1566,0,210,75]]}
 ];
 
 
@@ -27,37 +27,44 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_5 = function() {
+(lib.CachedBmp_6 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_4 = function() {
+(lib.CachedBmp_5 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_3 = function() {
+(lib.CachedBmp_4 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_2 = function() {
+(lib.CachedBmp_3 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_1 = function() {
+(lib.CachedBmp_2 = function() {
 	this.initialize(ss["carrito_atlas_1"]);
 	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_1 = function() {
+	this.initialize(ss["carrito_atlas_1"]);
+	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -78,7 +85,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
-(lib.Símbolo22 = function(mode,startPosition,loop,reversed) {
+(lib.Símbolo26 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -90,15 +97,14 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("Ak7E8IAAp3IJ3AAIAAJ3g");
-	this.shape.setTransform(31.625,31.625);
+	this.instance = new lib.CachedBmp_6();
+	this.instance.setTransform(-0.5,-0.5,0.5,0.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Símbolo22, new cjs.Rectangle(0,0,63.3,63.3), null);
+}).prototype = getMCSymbolPrototype(lib.Símbolo26, new cjs.Rectangle(-0.5,-0.5,1003,1), null);
 
 
 (lib.Símbolo21 = function(mode,startPosition,loop,reversed) {
@@ -360,7 +366,7 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
-		this.bteliminar.addEventListener("click", fl_MouseClickHandler.bind(this));
+		this.eliminar.addEventListener("click", fl_MouseClickHandler.bind(this));
 		
 		function fl_MouseClickHandler()
 		{
@@ -422,21 +428,13 @@ if (reversed == null) { reversed = false; }
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
-	// Capa_2
-	this.bteliminar = new lib.Símbolo22();
-	this.bteliminar.name = "bteliminar";
-	this.bteliminar.setTransform(979.85,49.15,1,1,0,0,0,31.6,31.6);
-	this.bteliminar.alpha = 0.0898;
-
-	this.timeline.addTween(cjs.Tween.get(this.bteliminar).wait(1));
-
 	// Capa_1
 	this.numerodepedido = new cjs.Text("", "25px 'Arial'", "#999999");
 	this.numerodepedido.name = "numerodepedido";
 	this.numerodepedido.lineHeight = 30;
 	this.numerodepedido.lineWidth = 37;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(-24.65,27.25);
+	this.numerodepedido.setTransform(-159.85,27.25);
 
 	this.unidad = new lib.Símbolo21();
 	this.unidad.name = "unidad";
@@ -444,7 +442,7 @@ if (reversed == null) { reversed = false; }
 
 	this.eliminar = new lib.Símbolo19();
 	this.eliminar.name = "eliminar";
-	this.eliminar.setTransform(980.55,47.6,1,1,44.9994,0,0,32.4,32.3);
+	this.eliminar.setTransform(980.05,47.75,1,1,44.9994,0,0,32.4,32.3);
 
 	this.nota = new cjs.Text("", "19px 'Arial'", "#666666");
 	this.nota.name = "nota";
@@ -478,7 +476,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(-26.6,0,1055.1999999999998,101.4), null);
+}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(-161.8,0,1189.8999999999999,101.4), null);
 
 
 // stage content:
@@ -565,10 +563,14 @@ if (reversed == null) { reversed = false; }
 		        // Verificar si el campo producto está vacío
 		        if (!pedido.producto.text || pedido.producto.text.trim() === "") {
 		            pedido.unidad.alpha = 0;
-		            pedido.eliminar.alpha = 0;
+					
+		            pedido.eliminar.x = 1200;
+					pedido.eliminar.y = 2;
 		        } else {
 		            pedido.unidad.alpha = 1;
-		            pedido.eliminar.alpha = 1;
+					
+					pedido.eliminar.x = 980;
+					pedido.eliminar.y = 2;
 		        }
 		    }
 		}
@@ -651,14 +653,6 @@ if (reversed == null) { reversed = false; }
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(4).call(this.frame_4).wait(1).call(this.frame_5).wait(1));
 
-	// Capa_2
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AnxBmQBpgPBkAAIBuACQBCABAtgFQCBgNCjhMQBdgsC4hkQg2Ash5BzQh4B1jiARQgzAEg0AAQi0AAi/gvg");
-	this.shape.setTransform(199.025,165.6463);
-	this.shape._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(4).to({_off:false},0).to({_off:true},1).wait(1));
-
 	// Capa_4
 	this.vaciar = new lib.Símbolo10copia();
 	this.vaciar.name = "vaciar";
@@ -678,6 +672,33 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.botonEnviar},{t:this.miTexto},{t:this.vaciar}]}).wait(6));
 
 	// Capa_1
+	this.instance = new lib.Símbolo26();
+	this.instance.setTransform(529.75,1540.1,1,1,0,0,0,503.4,0);
+
+	this.instance_1 = new lib.Símbolo26();
+	this.instance_1.setTransform(529.75,1397.15,1,1,0,0,0,503.4,0);
+
+	this.instance_2 = new lib.Símbolo26();
+	this.instance_2.setTransform(529.75,1254.2,1,1,0,0,0,503.4,0);
+
+	this.instance_3 = new lib.Símbolo26();
+	this.instance_3.setTransform(529.75,1111.35,1,1,0,0,0,503.4,0);
+
+	this.instance_4 = new lib.Símbolo26();
+	this.instance_4.setTransform(529.75,972.4,1,1,0,0,0,503.4,0);
+
+	this.instance_5 = new lib.Símbolo26();
+	this.instance_5.setTransform(529.75,829.5,1,1,0,0,0,503.4,0);
+
+	this.instance_6 = new lib.Símbolo26();
+	this.instance_6.setTransform(529.75,688.55,1,1,0,0,0,503.4,0);
+
+	this.instance_7 = new lib.Símbolo26();
+	this.instance_7.setTransform(529.75,547.6,1,1,0,0,0,503.4,0);
+
+	this.instance_8 = new lib.Símbolo26();
+	this.instance_8.setTransform(529.75,396.9,1,1,0,0,0,503.4,0);
+
 	this.pedido1 = new lib.Símbolo1();
 	this.pedido1.name = "pedido1";
 	this.pedido1.setTransform(517.2,327.25,1,1,0,0,0,486.4,50.7);
@@ -688,7 +709,7 @@ if (reversed == null) { reversed = false; }
 	this.numerodepedido.lineHeight = 24;
 	this.numerodepedido.lineWidth = 35;
 	this.numerodepedido.parent = this;
-	this.numerodepedido.setTransform(28.8,7.75);
+	this.numerodepedido.setTransform(-41.35,-58.6);
 
 	this.unidadescarrito = new cjs.Text("0", "40px 'Arial'");
 	this.unidadescarrito.name = "unidadescarrito";
@@ -698,17 +719,17 @@ if (reversed == null) { reversed = false; }
 	this.unidadescarrito.parent = this;
 	this.unidadescarrito.setTransform(983.7,24);
 
-	this.instance = new lib.Símbolo13();
-	this.instance.setTransform(984.05,43.25,1,1,0,0,0,28.8,28.8);
+	this.instance_9 = new lib.Símbolo13();
+	this.instance_9.setTransform(984.05,43.25,1,1,0,0,0,28.8,28.8);
 
-	this.instance_1 = new lib.Símbolo11();
-	this.instance_1.setTransform(941.9,87.5,0.3107,0.3107,0,0,0,110.5,101.7);
+	this.instance_10 = new lib.Símbolo11();
+	this.instance_10.setTransform(941.9,87.5,0.3107,0.3107,0,0,0,110.5,101.7);
 
-	this.instance_2 = new lib.Símbolo12();
-	this.instance_2.setTransform(945.95,84.8,0.6739,0.6739,0,0,0,85.7,85.8);
+	this.instance_11 = new lib.Símbolo12();
+	this.instance_11.setTransform(945.95,84.8,0.6739,0.6739,0,0,0,85.7,85.8);
 
-	this.instance_3 = new lib.CachedBmp_1();
-	this.instance_3.setTransform(480.05,20.8,0.5,0.5);
+	this.instance_12 = new lib.CachedBmp_1();
+	this.instance_12.setTransform(480.05,20.8,0.5,0.5);
 
 	this.total = new cjs.Text("$0", "bold 60px 'Arial'", "#FF0000");
 	this.total.name = "total";
@@ -754,12 +775,12 @@ if (reversed == null) { reversed = false; }
 	this.pedido2.name = "pedido2";
 	this.pedido2.setTransform(517.2,477.8,1,1,0,0,0,486.4,50.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1}]}).wait(6));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pedido2},{t:this.pedido3},{t:this.pedido4},{t:this.pedido5},{t:this.pedido6},{t:this.pedido7},{t:this.pedido8},{t:this.pedido9},{t:this.pedido10},{t:this.total},{t:this.instance_12},{t:this.instance_11},{t:this.instance_10},{t:this.instance_9},{t:this.unidadescarrito},{t:this.numerodepedido},{t:this.pedido1},{t:this.instance_8},{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(6));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(529.2,855.8,1306.3999999999999,805);
+p.nominalBounds = new cjs.Rectangle(394,789.4,1441.6,871.4);
 // library properties:
 lib.properties = {
 	id: '745C8092FF6F4B4FB679F7E273BDF59E',
@@ -769,7 +790,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/carrito_atlas_1.png?1743965429821", id:"carrito_atlas_1"}
+		{src:"images/carrito_atlas_1.png?1743966493272", id:"carrito_atlas_1"}
 	],
 	preloads: []
 };
